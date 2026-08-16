@@ -1,0 +1,272 @@
+- week: 
+  num: 1
+  dates:
+  - date: "1/5" 
+    title: "Introduction (NLP histroy and basics of language modeling)"
+    lecture: "intro"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L1-intro.pdf"
+    hwout: "0"
+  - date: "1/6" 
+    tutorial: 0 
+  - date: "1/7" 
+    title: "Language Modeling"
+    lecture: "lm"
+    leclinks:
+      - name: "LM slides"
+        url: "assets/lecture-slides/L2-language-models.pdf"
+  - date: "1/9"
+    tutorial: 1     
+- week:
+  num: 2
+  dates:
+  - date: "1/12" 
+    title: "Text classification - Naive Bayes and evaluation"
+    lecture: "classifiers"
+    leclinks:
+      - name: "NB slides"
+        url: "assets/lecture-slides/L3-classification-naivebayes.pdf"
+      - name: "Evaluation slides"
+        url: "assets/lecture-slides/L3-classification-evaluation.pdf"
+    readings: ["jm4"]
+  - date: "1/13" 
+    tutorial: 2
+  - date: "1/14" 
+    title: "Text classification - Logistic Regression"
+    lecture: "classifiers"
+    leclinks:
+      - name: "Logistic regression slides"
+        url: "assets/lecture-slides/L4-classification-logistic.pdf"
+    readings: ["jm5"]
+    hwdue: "0"
+    hwout: "1"
+  - date: "1/16" 
+    tutorial: 3
+- week: 
+  num: 3
+  dates:
+  - date: "1/19" 
+    title: "NN review and word representations"
+    lecture: "ff"
+    leclinks:
+      - name: "Neural network and classification review"
+        url: "assets/lecture-slides/L5-neural-nets.pdf"
+    leclinks:
+      - name: "WV slides 1"
+        url: "assets/lecture-slides/L6-wordvectors.pdf"
+  - date: "1/20" 
+    tutorial: 4
+  - date: "1/21" 
+    title: "Word Representations and neural language models"
+    lecture: "wordvec"
+    leclinks:
+      - name: "WV slides 2"
+        url: "assets/lecture-slides/L7-word2vec.pdf"
+  - date: "1/23" 
+    tutorial: 5
+- week: 
+  num: 4
+  dates:
+  - date: "1/26" 
+    title: "Sequence modeling (HMMs and RNNs)"
+    lecture: "hmm"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L8-sequence-modeling.pdf"
+      - name: "slides"
+        url: "assets/lecture-slides/L9-RNN.pdf"
+  - date: "1/27" 
+    tutorial: 6
+  - date: "1/28"
+    title: "Neural Sequence Modeling (LSTM/GRU)"
+    lecture: "rnn"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L10-LSTM-GRU.pdf"
+    hwdue: "1"
+    hwout: "2"
+  - date: "1/30" 
+    tutorial: 7
+- week: 
+  num: 5
+  dates:
+  - date: "2/2" 
+    title: "Sequence generation, attention, and intro to transformers"
+    lecture: "seq2seq"
+    leclinks:
+      - name: "sequence generation slides"
+        url: "assets/lecture-slides/L11-sequence-generation.pdf"
+      - name: "transformer slides"
+        url: "assets/lecture-slides/L12-transformers.pdf"
+  - date: "2/4" 
+    title: "Transformers"
+    lecture: "transformers"
+    leclinks:
+      - name: "transformer slides"
+        url: "assets/lecture-slides/L12-transformers.pdf"
+- week: 
+  num: 6
+  dates:
+  - date: "2/9" 
+    title: "Pretraining LLMs"
+    lecture: "llms"
+    leclinks:
+      - name: "pretraining slides"
+        url: "assets/lecture-slides/L14-pretraining.pdf"
+  - date: "2/11" 
+    title: "Tasks, benchmarks and project information"
+    lecture: "tasks"
+    leclinks:
+      - name: "project info slides"
+        url: "assets/lecture-slides/project-information.pdf"
+      - name: "benchmark slides"
+        url: "assets/slides/benchmarks.pdf"
+    hwdue: "2"
+    hwout: "3"
+- week: 
+  num: 7
+  dates:
+  - date: "2/16" 
+    noclass: true
+    title: "No class - Reading break"
+  - date: "2/19" 
+    noclass: true
+    title: "No class - Reading break"
+- week: 
+  num: 8
+  dates:
+  - date: "2/23" 
+    title: "Using LLMs: Prompting and parameter efficient fine-tuning"
+    lecture: "peft"
+    leclinks:
+      - name: "prompting"
+        url: "assets/lecture-slides/L15-fewshot.pdf"
+      - name: "fine-tuning"
+        url: "assets/lecture-slides/L16-peft.pdf"
+    readings: ["jm14", "jm15"]
+    project: "Project proposal"
+  - date: "2/25" 
+    title: "Modern LLM architecture"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L17-modern-llms.pdf"
+    hwdue: "3"
+    hwout: "4"
+- week: 
+  num: 9
+  dates:
+  - date: "3/2" 
+    lecture: "instruct_tuning"
+    title: "Posttraining - instruction tuning and preference alignment"
+    leclinks:
+      - name: "instruction tuning"
+        url: "assets/lecture-slides/L18-instruct_tuning.pdf"
+      - name: "preference alignment"
+        url: "assets/lecture-slides/L19-preference-alignment.pdf"
+  - date: "3/4" 
+    title: "Posttraining - preference alignment and reasoning"
+    lecture: "preference"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L19-reasoning.pdf"
+- week: 
+  num: 10
+  dates:
+  - date: "3/9" 
+    title: "Scaling laws and data"
+    lecture: "scaling-laws"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L20-scaling.pdf"
+  - date: "3/11" 
+    title: "Final project tips, model debugging and analysis"
+    lecture: "analysis"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L21-project-tips-analysis.pdf"
+    hwdue: "4"
+- week: 
+  num: 11
+  dates:
+  - date: "3/16" 
+    title: "Parsing"
+    lecture: ["parsing"]
+    leclinks:
+      - name: "constituency parsing"
+        url: "assets/lecture-slides/L22-constituency-parsing.pdf"
+      - name: "dependency parsing"
+        url: "assets/lecture-slides/L22-dependency-parsing.pdf"
+  - date: "3/18" 
+    title: "Information retrieval and RAG"
+    lecture: "rag"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L23-retrieval.pdf"
+  - date: "3/19" 
+    project: "Project milestone"
+- week: 
+  num: 12
+  dates:
+  - date: "3/23"
+    speaker: 
+      name: "Issam Laradji" 
+      url: "https://issamlaradji.com/"
+    title: "Emerging directions in Large Language Models and AI agents"
+  - date: "3/25" 
+    title: "LLMs for math and jailbreaking LLMs"
+    talks:
+      - name: "Jailbreaking LLMs"
+        speaker: Jialin Song
+        speakerUrl: "https://scholar.google.ca/citations?user=-zPtvfsAAAAJ"
+        url: "assets/lecture-slides/2026-03-25-JialinSong-LLMJailbreak.pdf" 
+      - name: "AI4Math"
+        speaker: Mike Lu
+        speakerUrl: "https://mikeljl.github.io/"
+        url: "assets/lecture-slides/2026-03-25-MikeLu-AIMath.pdf"
+- week: 
+  num: 13
+  dates:
+  - date: "3/30" 
+    title: "Grounding and multimodal models.  Talks from TAs"
+    lecture: "grounding"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L24-grounding.pdf"
+    talks:
+      - name: "Text and 3D Representation Learning"
+        speaker: Qirui Wu
+        speakerUrl: "https://qiruiw.github.io/"
+        url: "assets/lecture-slides/2026-03-30_CMPT-413_01_tt3d.pdf"
+      - name: "When Language Meets the Physical World: Semantic Representation for Robots"
+        speaker: Sonia Raychaudhuri
+        speakerUrl: "https://sonia-raychaudhuri.github.io/"
+        url: "assets/lecture-slides/2026-03-30_CMPT-413_02_semantic_repr.pdf"
+      - name: "Text-to-Scene Generation"
+        speaker: Xiaohao Sun
+        speakerUrl: "https://sun-xh.github.io/"
+        url: "assets/lecture-slides/2026-03-30_CMPT-413_03_text-to-scene.pdf"
+      - name: "LLMs for modeling DNA"
+        speaker: Austin Wang
+        speakerUrl: "https://atwang16.github.io/"
+        url: "assets/lecture-slides/2026-03-30_CMPT-413_04_DNA.pdf"
+      - name: "Visual grounding in 3D (from 2025)"
+        speaker: Austin Wang
+        speakerUrl: "https://atwang16.github.io/"
+        url: "assets/lecture-slides/2025-03-26_CMPT-413_01_3DGrounding.pdf"
+  - date: "4/1"
+    title: "Conclusion"
+    leclinks:
+      - name: "slides"
+        url: "assets/lecture-slides/L26-conclusion.pdf"
+- week: 
+  num: 14
+  dates:
+  - date: "4/6" 
+    noclass: true
+    title: "No class - Easter Monday"
+  - date: "4/8"
+    title: "Final project presentations"
+    lecture: "project"
+  - date: "4/9"
+    project: "Final project report"

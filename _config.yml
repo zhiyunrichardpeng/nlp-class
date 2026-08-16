@@ -1,0 +1,109 @@
+exclude: ['README.md', 'assets/latex/', 'archive', 'venv']
+timezone: US/Pacific
+markdown: kramdown
+coursys: "https://coursys.sfu.ca/2026sp-cmpt-713-x1/"
+forumname: Coursys Discussion Forum
+forum: "https://coursys.sfu.ca/2026sp-cmpt-713-x1/forum/"
+canvas: "none"
+semcode: 1261
+semester: "Spring 2026"
+calendar: "https://calendar.google.com/calendar/ical/qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com/public/basic.ics"
+lastday: "Apr 8, 2026"
+midterm: "None"
+instructor: angelx
+officehour: "Mon 1:30 to 2:30pm (until week of March 9th), Wed 1pm to 2pm (from week of March 16th onwards), Location: TASC1 8031"
+tas:
+  - name: "Sonia Raychaudhuri"
+    email: sraychau
+    officehour: "Thu, 2:00-3:00 PM (ASB9810)"
+  - name: "Qirui Wu"
+    email: qiruiw
+    officehour: "Tue, 3:00-4:00 PM (ASB9810)"
+  - name: "Austin Wang"
+    email: atw7
+    officehour: "Tue, 3:00-4:00 PM (ASB9810)"
+  - name: "Xiaohao Sun"
+    email: xsa55
+    officehour: "Thu, 2:00-3:00 PM (ASB9810)"
+tutorials:
+  - tutorial: "0"
+    title: "Review of a) probability, linear algebra and calculus and b) useful python/unix commands"
+    components: ["Probability, linear algebra and calculus", "Python/numpy/unix"]
+  - tutorial: "1"
+    title: "Building language models"
+  - tutorial: "2"
+    title: "Learning pytorch"
+  - tutorial: "3"
+    title: "Building classifiers with pytorch"
+  - tutorial: "4"
+    title: "Building text classifiers with word embeddings"
+  - tutorial: "5"
+    title: "Building text classifiers with pretrained word embeddings"
+  - tutorial: "6"
+    title: "Neural language models with BoW/Fixed Window FFN"
+  - tutorial: "7"
+    title: "Using RNNs in pytorch"
+  - tutorial: "8"
+    title: "Training/debugging networks and running experiments"
+  - tutorial: "9"
+    title: "Using Transformers in pytorch"
+  - tutorial: "10"
+    title: "Prompting large language models"
+group:
+  minsize: 2
+  maxsize: 3
+hwdates:
+  - hw: "0"
+    startdate: "Jan 5, 2026"
+    deadline: "Jan 14, 2026"
+    hwc-url: https://app.crowdmark.com/student/assessments/hw0-c-4bd18
+    hwp-report-submit-url: 
+  - hw: "1"
+    startdate: "Jan 14, 2026"
+    deadline: "Jan 28, 2026"
+    hwc-url: https://app.crowdmark.com/student/assessments/hw1-c-0d83e
+    hwp-report-submit-url: 
+  - hw: "2"
+    startdate: "Jan 28, 2026"
+    deadline: "Feb 11, 2026"
+    hwc-url: https://www.gradescope.ca/courses/33825/assignments/180853
+    hwp-report-submit-url: 
+  - hw: "3"
+    startdate: "Feb 11, 2026"
+    deadline: "Feb 25, 2026"
+    hwc-url: https://www.gradescope.ca/courses/33825/assignments/184655
+    hwp-report-submit-url: 
+  - hw: "4"
+    startdate: "Feb 25, 2026"
+    deadline: "Mar  11, 2026"
+    hwc-url: https://www.gradescope.ca/courses/33825/assignments/187573
+    hwp-report-submit-url: 
+  - hw: "project"
+    report-submit-name: "Gradescope"
+    startdate: "Feb 10, 2026"
+    deadline: "Apr 09, 2026"
+    time: "Poster session: ???"
+    location: "TBD"
+    abstract: "Feb 18, 2026"
+    proposal: "Feb 23, 2026"
+    proposal-submit-url: https://www.gradescope.ca/courses/33825/assignments/179256
+    milestone: "Mar 19, 2026"
+    milestone-submit-url: https://www.gradescope.ca/courses/33825/assignments/179257
+    poster: "Video due on Apr 6, 2026"
+    video-submit-url: https://www.gradescope.ca/courses/33825/assignments/179259
+    report-submit-url: https://www.gradescope.ca/courses/33825/assignments/179258
+hwsubmit:
+  name: "Coursys"
+  url:  "https://coursys.sfu.ca/2026sp-cmpt-713-x1/"
+hwp-report-submit:
+  name: "Crowdmark"
+  url:  "https://app.crowdmark.com/courses/cmpt413-d100-computational-linguistics-cmpt713-g100-natural-language-processing"
+  specify-group-url: "https://www.youtube.com/watch?v=N2LtHmdu09c"
+hwc01: "Crowdmark"
+hwcsubmit01:
+  name: "Crowdmark"
+  url:  "https://app.crowdmark.com/courses/cmpt413-d100-computational-linguistics-cmpt713-g100-natural-language-processing"
+hwc: "Gradescope"
+hwcsubmit01:
+  name: "Gradescope"
+  url:  "https://www.gradescope.ca/courses/33825"
