@@ -1,30 +1,28 @@
 exclude: ['README.md', 'assets/latex/', 'archive', 'venv']
 timezone: US/Pacific
 markdown: kramdown
-coursys: "https://coursys.sfu.ca/2026sp-cmpt-713-x1/"
+coursys: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
 forumname: Coursys Discussion Forum
-forum: "https://coursys.sfu.ca/2026sp-cmpt-713-x1/forum/"
+forum: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/forum/"
 canvas: "none"
 semcode: 1261
-semester: "Spring 2026"
+semester: "Fall 2026"
 calendar: "https://calendar.google.com/calendar/ical/qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com/public/basic.ics"
-lastday: "Apr 8, 2026"
+lastday: "Dec 6, 2026"
 midterm: "None"
-instructor: angelx
+instructor: zpa18
 officehour: "Mon 1:30 to 2:30pm (until week of March 9th), Wed 1pm to 2pm (from week of March 16th onwards), Location: TASC1 8031"
 tas:
-  - name: "Sonia Raychaudhuri"
-    email: sraychau
-    officehour: "Thu, 2:00-3:00 PM (ASB9810)"
-  - name: "Qirui Wu"
-    email: qiruiw
-    officehour: "Tue, 3:00-4:00 PM (ASB9810)"
-  - name: "Austin Wang"
-    email: atw7
-    officehour: "Tue, 3:00-4:00 PM (ASB9810)"
-  - name: "Xiaohao Sun"
-    email: xsa55
-    officehour: "Thu, 2:00-3:00 PM (ASB9810)"
+  - name: "Nima Forouzi"
+    email: nfa23
+    officehour: "TBD"
+  - name: "Borui Li"
+    email: bla127
+    officehour: "TBD"
+  - name: "Qinchan Li"
+    email: qla126
+    officehour: "TBD"
+
 tutorials:
   - tutorial: "0"
     title: "Review of a) probability, linear algebra and calculus and b) useful python/unix commands"
