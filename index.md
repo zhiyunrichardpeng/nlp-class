@@ -32,7 +32,7 @@ encode, human languages provide an interesting challenge, both in
 terms of its analysis and the learning of language from observations.
 
 #### Instructor
-* [Angel Chang](http://angelxuanchang.github.io/)
+* [Zhiyun (Richard) Peng](https://zhiyunrichardpeng.github.io/)
 
 #### Teaching Assistants
 <ul>
