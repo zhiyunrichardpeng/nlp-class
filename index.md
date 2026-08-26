@@ -79,17 +79,20 @@ There will be optional TA led tutorials that will help review these topics.
 
 #### Grading
 * Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
-* Programming setup and diagnostic homework (5%)
+* Weekly in-class closed-book quick quizzes (10%)
+* Programming setup and diagnostic homework (4%)
   * HW0 due on {{ site.hwdates[0].deadline }} 
-* Four homeworks (64% total - 16% each, with 8% for programming and 8% for question answering). Due dates:
+* Four homeworks (16% total - 4% each). Due dates:
   * HW1 on {{ site.hwdates[1].deadline }} 
   * HW2 on {{ site.hwdates[2].deadline }} 
   * HW3 on {{ site.hwdates[3].deadline }} 
   * HW4 on {{ site.hwdates[4].deadline }} 
-* Final Project (28% total)
-  * Project Proposal: Due on {{ site.hwdates[5].proposal }} (5%)
+* Midterm Exam (15%)
+* Final Exam (20%)
+* Final Project (25% total)
+  * Project Proposal: Due on {{ site.hwdates[5].proposal }} (3%)
   * Project Milestone: Due on {{ site.hwdates[5].milestone }} (5%)
   * Project "Poster" Presentation: {{ site.hwdates[5].poster }} (5%)
-  * Project Report and Code: Due on {{ site.hwdates[5].deadline }} (13%)
-* Participation: Helping other students on the discussion board in a positive way (3%)
+  * Project Report and Code: Due on {{ site.hwdates[5].deadline }} (12%)
+* Participation (10%): Engagement in the classroom (helping out) and helping other students on the discussion board.
 
