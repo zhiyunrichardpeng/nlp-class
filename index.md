@@ -49,9 +49,9 @@ terms of its analysis and the learning of language from observations.
 * Always post to the [{{site.forumname}}]({{ site.forum }}) instead of email. If you have to email use your SFU email address only.
 
 #### Time and place
-Course lectures will be held in person at the Burnaby campus
-* Wed 1:30-2:20pm
-* Fri 12:30-2:20pm
+* Sep 9 – Dec 6, 2026: Wed, 1:30–2:20 p.m.
+* Sep 9 – Dec 6, 2026: Fri, 12:30–2:20 p.m.
+* location : TBD, Burnaby campus.
 * Last day of classes: {{ site.lastday }}
 
 Links to course material will be made available on [Coursys]({{ site.coursys }}).
