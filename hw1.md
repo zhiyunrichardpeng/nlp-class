@@ -24,7 +24,7 @@ active_tab: homework
 
 Get started:
 
-    git clone https://github.com/angelxuanchang/nlp-class-hw.git
+    git clone https://github.com/zhiyunrichardpeng/nlp-class-hw.git
     cd nlp-class-hw/spellchk
 
 Clone your repository if you haven’t done it already:

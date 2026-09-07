@@ -33,7 +33,7 @@ previous homeworks then go into that directory and update the directory:
 If you don't have that directory anymore then simply clone the
 repository again:
 
-    git clone https://github.com/angelxuanchang/nlp-class-hw.git
+    git clone https://github.com/zhiyunrichardpeng/nlp-class-hw.git
 
 Clone your own repository from Github if you haven’t done it already:
 

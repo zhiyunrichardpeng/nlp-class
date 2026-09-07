@@ -304,7 +304,7 @@ Submission for each homework will be done on [Coursys]({{ site.coursys }}).
 
 Get started:
 
-    git clone https://github.com/angelxuanchang/nlp-class-hw.git
+    git clone https://github.com/zhiyunrichardpeng/nlp-class-hw.git
     cd nlp-class-hw/ensegment
 
 Clone your repository if you haven’t done it already:
