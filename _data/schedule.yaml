@@ -9,11 +9,13 @@
         url: "assets/lecture-slides/L1-intro.pdf"
     hwout: "0"
   - date: "9/11" 
-    title: "Language Modeling"
+    title: "Introduction 2 and Language Modeling"
     lecture: "lm"
     leclinks:
+      - name: "Intro 2 slides"
+        url: "assets/lecture-slides/L1a-intro-2.pdf"
       - name: "LM slides"
-        url: "assets/lecture-slides/L2-language-models.pdf"
+        url: "assets/lecture-slides/L1b-language-models.pdf"
   - date: "9/11" 
     tutorial: 0 
 
