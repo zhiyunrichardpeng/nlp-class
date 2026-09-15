@@ -14,7 +14,7 @@
     leclinks:
       - name: "Intro 2 slides"
         url: "assets/lecture-slides/L1a-intro-2.pdf"
-      - name: "LM slides"
+      - name: "LM slides (Updated Sept 15)"
         url: "assets/lecture-slides/L1b-language-models.pdf"
   - date: "9/11" 
     tutorial: 0 
@@ -26,17 +26,15 @@
     title: "Text classification - Naive Bayes and evaluation"
     lecture: "classifiers"
     leclinks:
-      - name: "NB slides"
-        url: "assets/lecture-slides/L3-classification-naivebayes.pdf"
-      - name: "Evaluation slides"
-        url: "assets/lecture-slides/L3-classification-evaluation.pdf"
+      - name: "Classification slides (Updated Sept 15)"
+        url: "assets/lecture-slides/L2-classification.pdf"
     readings: ["jm4"]
   - date: "9/18" 
     title: "Text classification - Logistic Regression"
     lecture: "classifiers"
     leclinks:
-      - name: "Logistic regression slides"
-        url: "assets/lecture-slides/L4-classification-logistic.pdf"
+      - name: "Logistic regression slides (Updated Sept 15)"
+        url: "assets/lecture-slides/L3-classification-LR-zp.pdf"
     readings: ["jm5"]
     hwdue: "0"
     hwout: "1"
