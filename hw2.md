@@ -11,12 +11,14 @@ active_tab: homework
 <span class="text-info">Start on {{ site.hwdates[2].startdate }}</span> |
 <span class="text-warning">Due on {{ site.hwdates[2].deadline }}</span>
 
-## Homework Questions 2: Word representations and sequence models
+## Conceptual question
 
 <span class="text-info">Out on {{ site.hwdates[2].startdate }}</span> 
 {% if site.hwdates[2].hwc-url %}
 <span>Posted on [{{site.hwc}}]({{ site.hwdates[2].hwc-url }}).</span> 
 {% endif %}
+
+Please submit your conceptual question to Gradescope and your programming question to Coursys.
 
 # Programming Homework 2: BERT Finetuning for Robust Phrasal Chunking
 

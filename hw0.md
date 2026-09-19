@@ -12,12 +12,14 @@ active_tab: homework
 <span class="text-info">Start on {{ site.hwdates[0].startdate }}</span> |
 <span class="text-warning">Due on {{ site.hwdates[0].deadline }}</span>
 
-## Homework Questions 0: Probability, linear algebra, and calculus
+## Conceptual question
 
 <span class="text-info">Out on {{ site.hwdates[0].startdate }}.</span> 
 {% if site.hwdates[0].hwc-url %}
 <span>Posted on [{{site.hwc01}}]({{ site.hwdates[0].hwc-url }}).</span> 
 {% endif %}
+
+Please submit your conceptual question to Gradescope and your programming question to Coursys.
 
 # Programming Homework 0: Setup
 

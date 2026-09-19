@@ -11,12 +11,14 @@ active_tab: homework
 <span class="text-info">Start on {{ site.hwdates[1].startdate }}</span> |
 <span class="text-warning">Due on {{ site.hwdates[1].deadline }}</span>
 
-## Homework Questions 1: Language models and text classification
+## Conceptual question
 
 <span class="text-info">Out on {{ site.hwdates[1].startdate }}.</span> 
 {% if site.hwdates[1].hwc-url %}
 <span>Posted on [{{site.hwc01}}]({{ site.hwdates[1].hwc-url }}).</span> 
 {% endif %}
+
+Please submit your conceptual question to Gradescope and your programming question to Coursys.
 
 # Programming Homework 1: Contextual Spell Checking
 
