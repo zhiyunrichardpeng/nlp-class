@@ -12,6 +12,7 @@ active_tab: syllabus
 The schedule is preliminary and subject to change.   Slides will be updated as the term progresses.
 
 ### [Course Recordings (CMPT 713 X1)](https://coursys.sfu.ca/#hi-there)
+- [SFU Stream Channel](https://stream.sfu.ca/Media/Channel/1267-cmpt-413-d100/browse/null/most-recent/null/0/null)
 - [YouTube link](https://www.youtube.com/playlist?list=PLSyETVkR56eI)
 - [BiliBili link](https://space.bilibili.com/3494365515221936/lists/7053025?type=season)
 
