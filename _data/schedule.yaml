@@ -218,53 +218,20 @@
   num: 12
   dates:
   - date: "11/25"
-    speaker: 
-      name: "Issam Laradji" 
-      url: "https://issamlaradji.com/"
-    title: "Emerging directions in Large Language Models and AI agents"
+    title: "Spare class"
     project: "Project milestone"
   - date: "11/27" 
-    title: "LLMs for math and jailbreaking LLMs"
-    talks:
-      - name: "Jailbreaking LLMs"
-        speaker: Jialin Song
-        speakerUrl: "https://scholar.google.ca/citations?user=-zPtvfsAAAAJ"
-        url: "assets/lecture-slides/2026-03-25-JialinSong-LLMJailbreak.pdf" 
-      - name: "AI4Math"
-        speaker: Mike Lu
-        speakerUrl: "https://mikeljl.github.io/"
-        url: "assets/lecture-slides/2026-03-25-MikeLu-AIMath.pdf"
+    title: "Spare class"
 
 - week: 
   num: 13
   dates:
   - date: "12/2" 
-    title: "Grounding and multimodal models. Talks from TAs"
+    title: "Grounding and multimodal models"
     lecture: "grounding"
     leclinks:
       - name: "slides"
         url: "assets/lecture-slides/L24-grounding.pdf"
-    talks:
-      - name: "Text and 3D Representation Learning"
-        speaker: Qirui Wu
-        speakerUrl: "https://qiruiw.github.io/"
-        url: "assets/lecture-slides/2026-03-30_CMPT-413_01_tt3d.pdf"
-      - name: "When Language Meets the Physical World: Semantic Representation for Robots"
-        speaker: Sonia Raychaudhuri
-        speakerUrl: "https://sonia-raychaudhuri.github.io/"
-        url: "assets/lecture-slides/2026-03-30_CMPT-413_02_semantic_repr.pdf"
-      - name: "Text-to-Scene Generation"
-        speaker: Xiaohao Sun
-        speakerUrl: "https://sun-xh.github.io/"
-        url: "assets/lecture-slides/2026-03-30_CMPT-413_03_text-to-scene.pdf"
-      - name: "LLMs for modeling DNA"
-        speaker: Austin Wang
-        speakerUrl: "https://atwang16.github.io/"
-        url: "assets/lecture-slides/2026-03-30_CMPT-413_04_DNA.pdf"
-      - name: "Visual grounding in 3D (from 2025)"
-        speaker: Austin Wang
-        speakerUrl: "https://atwang16.github.io/"
-        url: "assets/lecture-slides/2025-03-26_CMPT-413_01_3DGrounding.pdf"
   - date: "12/4"
     title: "Final project presentations & Conclusion"
     lecture: "project"
