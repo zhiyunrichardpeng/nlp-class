@@ -3,13 +3,13 @@ layout: default
 img: artsrouni
 img_link: http://www.hutchinsweb.me.uk/IJT-2004.pdf
 caption: "Georges Artsrouni's mechanical brain, a translation device patented in 1933 in France."
-title: Syllabus
+title: Syllabus (not maintained in 2026 fall)
 active_tab: syllabus
 ---
 
-## Syllabus
+## Syllabus (not maintained in 2026 fall)
 
-The syllabus is preliminary and subject to change.  Lecture notes are from prior years and are subject to change.  Updated lecture notes will be posted after the lecture.
+The syllabus is not maintained in 2026 fall. Lecture notes are from prior years and are subject to change. Updated lecture notes will be posted after the lecture.
 
 <style type="text/css">
     .bs-example{
