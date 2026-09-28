@@ -48,13 +48,13 @@
     title: "NN review and word representations"
     lecture: "ff"
     leclinks:
-      - name: "Neural network and classification review"
+      - name: "Neural network and classification review (Updated Sept 28)"
         url: "assets/lecture-slides/L4-neural-nets-zp.pptx"
   - date: "9/25" 
     title: "Word Representations and neural language models"
     lecture: "wordvec"
     leclinks:
-      - name: "WV slides 1"
+      - name: "word vector slides 1 (Updated Sept 28)"
         url: "assets/lecture-slides/L5-wordvectors-P15-done.pptx"
   - date: "9/25" 
     tutorial: 2
