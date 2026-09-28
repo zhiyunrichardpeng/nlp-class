@@ -50,14 +50,12 @@
     leclinks:
       - name: "Neural network and classification review"
         url: "assets/lecture-slides/L4-neural-nets-zp.pptx"
-      - name: "WV slides 1"
-        url: "assets/lecture-slides/L5-wordvectors-P15-done.pptx"
   - date: "9/25" 
     title: "Word Representations and neural language models"
     lecture: "wordvec"
     leclinks:
-      - name: "WV slides 2"
-        url: "assets/lecture-slides/L7-word2vec.pdf"
+      - name: "WV slides 1"
+        url: "assets/lecture-slides/L5-wordvectors-P15-done.pptx"
   - date: "9/25" 
     tutorial: 2
 
