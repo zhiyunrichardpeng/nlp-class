@@ -54,51 +54,51 @@ hwdates:
   - hw: "0"
     startdate: "Sep 9, 2026"
     deadline: "Sep 18, 2026"
-    hwc-url: https://www.gradescope.ca
-    hwp-report-submit-url: 
+    hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+    hwp-report-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "1"
     startdate: "Sep 18, 2026"
     deadline: "Oct 7, 2026"
-    hwc-url: https://www.gradescope.ca
-    hwp-report-submit-url: 
+    hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+    hwp-report-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "2"
     startdate: "Oct 7, 2026"
     deadline: "Oct 23, 2026"
-    hwc-url: https://www.gradescope.ca
-    hwp-report-submit-url: 
+    hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+    hwp-report-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "3"
     startdate: "Oct 23, 2026"
     deadline: "Oct 30, 2026"
-    hwc-url: https://www.gradescope.ca
-    hwp-report-submit-url: 
+    hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+    hwp-report-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "4"
     startdate: "Oct 30, 2026"
     deadline: "Nov 20, 2026"
-    hwc-url: https://www.gradescope.ca
-    hwp-report-submit-url: 
+    hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+    hwp-report-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "project"
-    report-submit-name: "Gradescope"
+    report-submit-name: "Coursys"
     startdate: "Oct 23, 2026"
     deadline: "Dec 9, 2026"
     time: "Poster session: TBD"
     location: "TBD"
     abstract: "Oct 28, 2026"
     proposal: "Oct 28, 2026"
-    proposal-submit-url: https://www.gradescope.ca/courses/33825/assignments/179256
+    proposal-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
     milestone: "Nov 25, 2026"
-    milestone-submit-url: https://www.gradescope.ca/courses/33825/assignments/179257
+    milestone-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
     poster: "Poster due on Dec 4, 2026"
-    video-submit-url: https://www.gradescope.ca/courses/33825/assignments/179259
-    report-submit-url: https://www.gradescope.ca/courses/33825/assignments/179258
+    video-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+    report-submit-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
 hwsubmit:
   name: "Coursys"
-  url:  "https://coursys.sfu.ca/2026sp-cmpt-713-x1/"
+  url:  "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
 hwp-report-submit:
-  name: "Gradescope"
-  url:  "https://www.gradescope.ca/courses/33825"
+  name: "Coursys"
+  url:  "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   specify-group-url: "https://www.youtube.com/watch?v=N2LtHmdu09c"
-hwc01: "Gradescope"
+hwc01: "Coursys"
 hwcsubmit01:
-  name: "Gradescope"
-  url:  "https://www.gradescope.ca/courses/33825"
-hwc: "Gradescope"
+  name: "Coursys"
+  url:  "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
+hwc: "Coursys"
