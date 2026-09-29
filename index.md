@@ -9,6 +9,27 @@ active_tab: main_page
 
 ## Natural Language Processing <span class="text-muted">{{ site.semester }}</span>
 
+#### Announcement (Updated Sept 29)
+
+Hi class,
+
+The reformation, taking the inputs from students and previous instructors, after the meeting with our teaching team and majority vote, is as below:
+
+1. The quiz will be discontinued. Its 10% grade moves to 5% each for midterm and final. Please use the conceptual assignments to review the course materials.
+2. quiz 0: in the first class, no grading. quiz 1 (1 score) and quiz 2 (1 score), the grades will be bonus grades. The bonus scores are added AFTER the curve. That means, if you lost these two bonus scores, but you obtained 100 scores for the rest of the tasks, you will have 100 scores after the curve.
+3. 10% engagement changes to 10% in-person attendance.
+4. We only use main website and Coursys (all submissions go to here) from now on. I.e., we discontinue the usage of Gradescope and Canvas. The Deadline and course information in Coursys will synchronize with the main website.
+5. We will try to provide sample exams for midterm and final exam. A calculator, one page (double sided) cheat sheet, are allowed. Final exam date is not determined.
+6. Regarding "weekly online quizzes that allow unlimited attempts", I like this idea, but unfortunately the teaching team has voted against it. I may bring this to the next NLP course design.
+-In the meantime, you can still make use of the AI to design the "quizzes that allow unlimited attempts", to achieve the learning effect. Also, the small questions I asked in class, and shown in the slides, can also be the self-evaluation quizzes.
+
+The basic idea behind these changes is: a) Enforce the fairness; b) Keep the grading rubric stable after this reformation. The reformation may not satisfy everyone, but we have tried our best to make the decision.
+
+Take a good rest on Sept 30th's holiday and see you on Oct 2nd,  
+Richard
+
+---
+
 Imagine a world where you can pick up a phone and talk in English,
 while at the other end of the line your words are [spoken in
 Chinese](https://www.youtube.com/watch?v=Nu-nlQqFCKg).  Imagine a
@@ -78,8 +99,7 @@ There will be optional TA led tutorials that will help review these topics.
 
 
 #### Grading
-* Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
-* Weekly in-class closed-book quick quizzes (10%)
+* Submit all homework assignments and check your grades on [Coursys]({{ site.coursys }}). We have discontinued the usage of Gradescope and Canvas. Deadlines and course information in Coursys will synchronize with the main website.
 * Programming setup and diagnostic homework (4%)
   * HW0 due on {{ site.hwdates[0].deadline }} 
 * Four homeworks (16% total - 4% each). Due dates:
@@ -87,12 +107,18 @@ There will be optional TA led tutorials that will help review these topics.
   * HW2 on {{ site.hwdates[2].deadline }} 
   * HW3 on {{ site.hwdates[3].deadline }} 
   * HW4 on {{ site.hwdates[4].deadline }} 
-* Midterm Exam (15%)
-* Final Exam (20%)
+* Midterm Exam (20%)
+* Final Exam (25%)
 * Final Project (25% total)
   * Project Proposal: Due on {{ site.hwdates[5].proposal }} (3%)
   * Project Milestone: Due on {{ site.hwdates[5].milestone }} (5%)
   * Project "Poster" Presentation: {{ site.hwdates[5].poster }} (5%)
   * Project Report and Code: Due on {{ site.hwdates[5].deadline }} (12%)
-* Participation (10%): Engagement in the classroom (helping out) and helping other students on the discussion board.
+* Participation (10%): In-person attendance.
+* Bonus: Quizzes 1 and 2 (1 point each) will be added to your final score as bonus points outside the standard grading scheme. The bonus scores are added AFTER the curve. Please use the conceptual assignments to review the course materials.
+
+#### Exams
+* We will try to provide sample exams for midterm and final exam. 
+* A calculator and one page (double sided) cheat sheet are allowed. 
+* Final exam date is not determined.
 
