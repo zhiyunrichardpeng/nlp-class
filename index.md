@@ -78,7 +78,8 @@ There will be optional TA led tutorials that will help review these topics.
 
 
 #### Grading
-* Submit all homework assignments and check your grades on [Coursys]({{ site.coursys }}). We have discontinued the usage of Gradescope and Canvas. Deadlines and course information in Coursys will synchronize with the main website.
+* Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
+* Weekly in-class closed-book quick quizzes (10%)
 * Programming setup and diagnostic homework (4%)
   * HW0 due on {{ site.hwdates[0].deadline }} 
 * Four homeworks (16% total - 4% each). Due dates:
@@ -86,18 +87,12 @@ There will be optional TA led tutorials that will help review these topics.
   * HW2 on {{ site.hwdates[2].deadline }} 
   * HW3 on {{ site.hwdates[3].deadline }} 
   * HW4 on {{ site.hwdates[4].deadline }} 
-* Midterm Exam (20%)
-* Final Exam (25%)
+* Midterm Exam (15%)
+* Final Exam (20%)
 * Final Project (25% total)
   * Project Proposal: Due on {{ site.hwdates[5].proposal }} (3%)
   * Project Milestone: Due on {{ site.hwdates[5].milestone }} (5%)
   * Project "Poster" Presentation: {{ site.hwdates[5].poster }} (5%)
   * Project Report and Code: Due on {{ site.hwdates[5].deadline }} (12%)
-* Participation (10%): In-person attendance.
-* Bonus: Quizzes 1 and 2 (1 point each) will be added to your final score as bonus points outside the standard grading scheme. Please use the conceptual assignments to review the course materials.
-
-#### Exams
-* We will try to provide sample exams for midterm and final exam. 
-* A calculator and one page (double sided) cheat sheet are allowed. 
-* Final exam date is not determined.
+* Participation (10%): Engagement in the classroom (helping out) and helping other students on the discussion board.
 
