@@ -54,8 +54,8 @@
     title: "Word Representations and neural language models"
     lecture: "wordvec"
     leclinks:
-      - name: "word vector slides 1 (Updated Sept 28)"
-        url: "assets/lecture-slides/L5-wordvectors-P15-done.pptx"
+      - name: "word vector slides 1"
+        url: "assets/lecture-slides/L5-wordvectors-zp.pptx"
   - date: "9/25" 
     tutorial: 2
 
@@ -66,13 +66,11 @@
     noclass: true
     title: "No class - National Day for Truth and Reconciliation"
   - date: "10/2" 
-    title: "Sequence modeling (HMMs and RNNs)"
-    lecture: "hmm"
+    title: "Word2Vec"
+    lecture: "wordvec2"
     leclinks:
-      - name: "slides"
-        url: "assets/lecture-slides/L8-sequence-modeling.pdf"
-      - name: "slides"
-        url: "assets/lecture-slides/L9-RNN.pdf"
+      - name: "word2vec slides"
+        url: "assets/lecture-slides/L6-word2vec P10 done.pptx"
   - date: "10/2" 
     tutorial: 3
 
