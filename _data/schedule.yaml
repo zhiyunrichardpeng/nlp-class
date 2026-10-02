@@ -5,16 +5,16 @@
     title: "Introduction (NLP history and basics of language modeling)"
     lecture: "intro"
     leclinks:
-      - name: "slides"
+      - name: "L1-intro"
         url: "assets/lecture-slides/L1-intro.pdf"
     hwout: "0"
   - date: "9/11" 
     title: "Introduction 2 and Language Modeling"
     lecture: "lm"
     leclinks:
-      - name: "Intro 2 slides"
+      - name: "L1a-intro-2"
         url: "assets/lecture-slides/L1a-intro-2.pdf"
-      - name: "LM slides (Updated Sept 15)"
+      - name: "L1b-language-models"
         url: "assets/lecture-slides/L1b-language-models.pdf"
   - date: "9/11" 
     tutorial: 0 
@@ -26,14 +26,14 @@
     title: "Text classification - Naive Bayes and evaluation"
     lecture: "classifiers"
     leclinks:
-      - name: "Classification slides (Updated Sept 15)"
+      - name: "L2-classification"
         url: "assets/lecture-slides/L2-classification.pdf"
     readings: ["jm4"]
   - date: "9/18" 
     title: "Text classification - Logistic Regression"
     lecture: "classifiers"
     leclinks:
-      - name: "Logistic regression slides (Updated Sept 15)"
+      - name: "L3-classification-LR-zp"
         url: "assets/lecture-slides/L3-classification-LR-zp.pdf"
     readings: ["jm5"]
     hwdue: "0"
@@ -48,13 +48,13 @@
     title: "NN review and word representations"
     lecture: "ff"
     leclinks:
-      - name: "Neural network and classification review (Updated Sept 28)"
+      - name: "L4-neural-nets-zp"
         url: "assets/lecture-slides/L4-neural-nets-zp.pptx"
   - date: "9/25" 
     title: "Word Representations and neural language models"
     lecture: "wordvec"
     leclinks:
-      - name: "word vector slides 1 (Updated Oct 2nd)"
+      - name: "L5-wordvectors-zp"
         url: "assets/lecture-slides/L5-wordvectors-zp.pptx"
   - date: "9/25" 
     tutorial: 2
@@ -69,7 +69,7 @@
     title: "Word2Vec"
     lecture: "wordvec2"
     leclinks:
-      - name: "word2vec slides (Updated Oct 2nd)"
+      - name: "L6-word2vec P10 done"
         url: "assets/lecture-slides/L6-word2vec P10 done.pptx"
   - date: "10/2" 
     tutorial: 3
@@ -81,7 +81,7 @@
     title: "Neural Sequence Modeling (LSTM/GRU)"
     lecture: "rnn"
     leclinks:
-      - name: "slides"
+      - name: "L10-LSTM-GRU"
         url: "assets/lecture-slides/L10-LSTM-GRU.pdf"
     hwdue: "1"
     hwout: "2"
@@ -89,9 +89,9 @@
     title: "Sequence generation, attention, and intro to transformers"
     lecture: "seq2seq"
     leclinks:
-      - name: "sequence generation slides"
+      - name: "L11-sequence-generation"
         url: "assets/lecture-slides/L11-sequence-generation.pdf"
-      - name: "transformer slides"
+      - name: "L12-transformers"
         url: "assets/lecture-slides/L12-transformers.pdf"
   - date: "10/9" 
     tutorial: 4
@@ -103,13 +103,13 @@
     title: "Transformers"
     lecture: "transformers"
     leclinks:
-      - name: "transformer slides"
+      - name: "L12-transformers"
         url: "assets/lecture-slides/L12-transformers.pdf"
   - date: "10/16" 
     title: "Pretraining LLMs"
     lecture: "llms"
     leclinks:
-      - name: "pretraining slides"
+      - name: "L14-pretraining"
         url: "assets/lecture-slides/L14-pretraining.pdf"
   - date: "10/16" 
     tutorial: 5
@@ -124,9 +124,9 @@
     title: "Tasks, benchmarks and project information"
     lecture: "tasks"
     leclinks:
-      - name: "project info slides"
+      - name: "project-information"
         url: "assets/lecture-slides/project-information.pdf"
-      - name: "benchmark slides"
+      - name: "benchmarks"
         url: "assets/slides/benchmarks.pdf"
     hwdue: "2"
     hwout: "3"
@@ -140,16 +140,16 @@
     title: "Using LLMs: Prompting and parameter efficient fine-tuning"
     lecture: "peft"
     leclinks:
-      - name: "prompting"
+      - name: "L15-fewshot"
         url: "assets/lecture-slides/L15-fewshot.pdf"
-      - name: "fine-tuning"
+      - name: "L16-peft"
         url: "assets/lecture-slides/L16-peft.pdf"
     readings: ["jm14", "jm15"]
     project: "Project proposal"
   - date: "10/30" 
     title: "Modern LLM architecture"
     leclinks:
-      - name: "slides"
+      - name: "L17-modern-llms"
         url: "assets/lecture-slides/L17-modern-llms.pdf"
     hwdue: "3"
     hwout: "4"
@@ -163,15 +163,15 @@
     lecture: "instruct_tuning"
     title: "Posttraining - instruction tuning and preference alignment"
     leclinks:
-      - name: "instruction tuning"
+      - name: "L18-instruct_tuning"
         url: "assets/lecture-slides/L18-instruct_tuning.pdf"
-      - name: "preference alignment"
+      - name: "L19-preference-alignment"
         url: "assets/lecture-slides/L19-preference-alignment.pdf"
   - date: "11/6" 
     title: "Posttraining - preference alignment and reasoning"
     lecture: "preference"
     leclinks:
-      - name: "slides"
+      - name: "L19-reasoning"
         url: "assets/lecture-slides/L19-reasoning.pdf"
   - date: "11/6" 
     tutorial: 8
@@ -186,7 +186,7 @@
     title: "Scaling laws and data"
     lecture: "scaling-laws"
     leclinks:
-      - name: "slides"
+      - name: "L20-scaling"
         url: "assets/lecture-slides/L20-scaling.pdf"
   - date: "11/13" 
     tutorial: 9
@@ -198,14 +198,14 @@
     title: "Final project tips, model debugging and analysis"
     lecture: "analysis"
     leclinks:
-      - name: "slides"
+      - name: "L21-project-tips-analysis"
         url: "assets/lecture-slides/L21-project-tips-analysis.pdf"
     hwdue: "4"
   - date: "11/20" 
     title: "Information retrieval and RAG"
     lecture: "rag"
     leclinks:
-      - name: "slides"
+      - name: "L23-retrieval"
         url: "assets/lecture-slides/L23-retrieval.pdf"
   - date: "11/20" 
     tutorial: 10
@@ -226,13 +226,13 @@
     title: "Grounding and multimodal models"
     lecture: "grounding"
     leclinks:
-      - name: "slides"
+      - name: "L24-grounding"
         url: "assets/lecture-slides/L24-grounding.pdf"
   - date: "12/4"
     title: "Final project presentations & Conclusion"
     lecture: "project"
     leclinks:
-      - name: "slides"
+      - name: "L26-conclusion"
         url: "assets/lecture-slides/L26-conclusion.pdf"
 
 - week: 
