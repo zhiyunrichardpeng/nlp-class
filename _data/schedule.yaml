@@ -54,7 +54,7 @@
     title: "Word Representations and neural language models"
     lecture: "wordvec"
     leclinks:
-      - name: "word vector slides 1"
+      - name: "word vector slides 1 (Updated Oct 2nd)"
         url: "assets/lecture-slides/L5-wordvectors-zp.pptx"
   - date: "9/25" 
     tutorial: 2
@@ -69,7 +69,7 @@
     title: "Word2Vec"
     lecture: "wordvec2"
     leclinks:
-      - name: "word2vec slides"
+      - name: "word2vec slides (Updated Oct 2nd)"
         url: "assets/lecture-slides/L6-word2vec P10 done.pptx"
   - date: "10/2" 
     tutorial: 3
