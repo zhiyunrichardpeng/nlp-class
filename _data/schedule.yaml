@@ -14,7 +14,7 @@
     leclinks:
       - name: "L1a-intro-2"
         url: "assets/lecture-slides/L1a-intro-2.pdf"
-      - name: "L1b-language-models"
+      - name: "L1b-language-models (Updated Sept 15)"
         url: "assets/lecture-slides/L1b-language-models.pdf"
   - date: "9/11" 
     tutorial: 0 
@@ -26,14 +26,14 @@
     title: "Text classification - Naive Bayes and evaluation"
     lecture: "classifiers"
     leclinks:
-      - name: "L2-classification"
+      - name: "L2-classification (Updated Sept 15)"
         url: "assets/lecture-slides/L2-classification.pdf"
     readings: ["jm4"]
   - date: "9/18" 
     title: "Text classification - Logistic Regression"
     lecture: "classifiers"
     leclinks:
-      - name: "L3-classification-LR-zp"
+      - name: "L3-classification-LR-zp (Updated Sept 15)"
         url: "assets/lecture-slides/L3-classification-LR-zp.pdf"
     readings: ["jm5"]
     hwdue: "0"
@@ -48,13 +48,13 @@
     title: "NN review and word representations"
     lecture: "ff"
     leclinks:
-      - name: "L4-neural-nets-zp"
+      - name: "L4-neural-nets-zp (Updated Sept 28)"
         url: "assets/lecture-slides/L4-neural-nets-zp.pptx"
   - date: "9/25" 
     title: "Word Representations and neural language models"
     lecture: "wordvec"
     leclinks:
-      - name: "L5-wordvectors-zp"
+      - name: "L5-wordvectors-zp (Updated Oct 2nd)"
         url: "assets/lecture-slides/L5-wordvectors-zp.pptx"
   - date: "9/25" 
     tutorial: 2
@@ -69,7 +69,7 @@
     title: "Word2Vec"
     lecture: "wordvec2"
     leclinks:
-      - name: "L6-word2vec P10 done"
+      - name: "L6-word2vec P10 done (Updated Oct 2nd)"
         url: "assets/lecture-slides/L6-word2vec P10 done.pptx"
   - date: "10/2" 
     tutorial: 3
