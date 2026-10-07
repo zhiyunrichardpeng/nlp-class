@@ -20,6 +20,8 @@ Your project should aim to answer a scientific question and provide some kind of
 
 You should pick something you are passionate about or something you find interesting.  When selecting a project, you should make sure that you can find an well-defined dataset that you can use for your project.
 
+Below is a list of final [project proposals](https://1sfu-my.sharepoint.com/:w:/g/personal/zpa18_sfu_ca/IQDCRv1c6SI7S4r2kZUM5WjiAa3ffDGkJ5pjVHR0z3sdw6k?e=EFqjLT) for the course. Several projects focus on low-resource language processing (specifically Canadian Indigenous languages) and multimodal applications that intersect with physically based facial animation. These projects offer opportunities to build datasets, pipelines, and validation metrics with real-world research applications.
+
 Possible projects types include:
 * Re-implementing / rereproducing a recent paper
 * Applying an existing neural model to a new task
