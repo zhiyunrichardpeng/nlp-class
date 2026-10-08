@@ -69,8 +69,8 @@
     title: "Word2Vec"
     lecture: "wordvec2"
     leclinks:
-      - name: "L6-word2vec P47 done (Updated Oct 7th)"
-        url: "assets/lecture-slides/L6-word2vec P47 done.pptx"
+      - name: "L6-word2vec (Updated Oct 8th)"
+        url: "assets/lecture-slides/L6-word2vec.pptx"
   - date: "10/2" 
     tutorial: 3
 
