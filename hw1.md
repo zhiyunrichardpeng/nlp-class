@@ -274,13 +274,8 @@ of what they did for this homework in the Python notebook.
 Go to `Programming Homework 1` on {{ site.hwsubmit.name }} and do a group submission:
 
 * Upload `output.zip` and `source.zip` [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}/+hwp1/)
-{% if site.hwdates[1].hwp-report-submit-url %}
-* Please upload your `report.pdf` to [{{site.hwp-report-submit.name}}]({{site.hwdates[1].hwp-report-submit-url}}) HW1-P Report.
-Only one person need to submit for the group, but please [add your group members]({{site.hwp-report-submit.specify-group-url}})
-so that they can see the submission and specify the name of your group in the report.
-{% endif %}
 * Make sure your `source.zip` matches your Github repository.
-* Make sure you have documented your approach in `answer/spellchk.ipynb`.
+* Make sure you have documented your approach and analysis in `answer/spellchk.ipynb` (which serves as your report).
 * Make sure each member of your group has documented their contribution to this homework in `answer/README.username` where `username` is your CSIL/Github username.
 
 ## Grading
@@ -289,7 +284,7 @@ The grading is split up into the following components:
 
 * dev scores (see Table below)
 * test scores (see Table below)
-* Documentation and analysis (e.g. report) quality 
+* Documentation and analysis quality in the Python notebook
 * Code content and quality
   * Make sure that iterative search algorithm is implemented as described in the Baseline section above
 * Check if each group member has a `answer/README.username`.

@@ -547,12 +547,7 @@ In addition, each group member should write down a short description of what the
 Go to `Programming Homework 0` on [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}) and do a group submission:
 
 * Upload `output.zip` and `source.zip` to [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}/+hwp0/)
-{% if site.hwdates[0].hwp-report-submit-url %}
-* Please upload your `report.pdf` to [{{site.hwp-report-submit.name}}]({{site.hwdates[0].hwp-report-submit-url}}) HW0-P Report.
-Only one person need to submit for the group, but please [add your group members]({{site.hwp-report-submit.specify-group-url}})
-so that they can see the submission and specify the name of your group in the report.
-{% endif %}
-* Make sure you have documented your approach in `answer/ensegment.ipynb`.
+* Make sure you have documented your approach in `answer/ensegment.ipynb` (which serves as your report).
 * Make sure each member of your group has documented their contribution to this homework in `answer/README.username` where `username` is your CSIL/GitHub username.
 
 ## Grading
@@ -563,7 +558,7 @@ The grading is split up into the following components:
 * Github setup including adding instructor and TAs as Collaborator to the repository.
 * dev scores (see Table below)
 * test scores (see Table below)
-* documentation and analysis (e.g. report) quality 
+* Documentation and analysis quality in the iPython notebook
 * code content and quality (a good iPython notebook can help TAs understand your code)
 * check if each group member has a `answer/README.username`.
 

@@ -538,12 +538,7 @@ did for this homework in `answer/README.username`.
 Go to `Programming Homework 2` on {{ site.hwsubmit.name }} and do a group submission:
 
 * Upload `output.zip` and `source.zip` to [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}/+hwp2/)
-{% if site.hwdates[2].hwp-report-submit-url %}
-* Please upload your `report.pdf` to [{{site.hwp-report-submit.name}}]({{site.hwdates[2].hwp-report-submit-url}}) HW2-P Report.
-Only one person need to submit for the group, but please [add your group members]({{site.hwp-report-submit.specify-group-url}})
-so that they can see the submission and specify the name of your group in the report.
-{% endif %}
-* Make sure you have documented your approach in `answer/bertchunker.ipynb`.
+* Make sure you have documented your approach and analysis in `answer/bertchunker.ipynb` (which serves as your report).
 * Check if each group member has a `answer/README.username`.
 * Make sure that your have updated your Github repository with your submission source code.
 
@@ -553,7 +548,7 @@ The grading is split up into the following components:
 
 * dev scores (see Table below)
 * test scores (see Table below)
-* Report quality 
+* Documentation and analysis quality in the notebook
 * Code content and quality
    * Make sure that you are not using any external data sources in your solution.
    * Make sure you have implemented the fine-tuning model improvements yourself without using external libraries.

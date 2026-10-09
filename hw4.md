@@ -346,12 +346,7 @@ Each group member should write about what they did for this homework in the Pyth
 Go to `Programming Homework 4` on {{ site.hwsubmit.name }} and do a group submission:
 
 * Upload `output.zip` and `source.zip` to [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}/+hwp4/)
-{% if site.hwdates[4].hwp-report-submit-url %}
-* Please upload your `report.pdf` to [{{site.hwp-report-submit.name}}]({{site.hwdates[4].hwp-report-submit-url}}) HW4-P Report.  
-Only one person need to submit for the group, but please [add your group members]({{site.hwp-report-submit.specify-group-url}})
-so that they can see the submission and specify the name of your group in the report.
-{% endif %}
-* Make sure you have documented your approach in `answer/prefixtune.ipynb`.
+* Make sure you have documented your approach and analysis in `answer/prefixtune.ipynb` (which serves as your report).
 * Make sure each member of your group has documented their contribution to this homework in the Python notebook.
 
 ## Grading
@@ -360,7 +355,7 @@ The grading is split up into the following components:
 
 * dev scores (see Table below)
 * test scores (see Table below)
-* Documentation and analysis (e.g. report) quality 
+* Documentation and analysis quality in the Python notebook
 * Code content and quality 
    * Make sure that you are not using any external data sources in your solution.
    * Make sure you have implemented the fine-tuning model improvements yourself without using external libraries.
