@@ -247,10 +247,10 @@
       soln: "assets/notes/word2vec_soln.html"
   readings:
     - author: Dan Jurafsky and James H. Martin
-      title: "Embeddings (J+M chapter 4)"
-      abbr: "J+M chapter 4" 
-      tag: "jm4"
-      url: "https://web.stanford.edu/~jurafsky/slp3/4.pdf"
+      title: "Embeddings (J+M chapter 5)"
+      abbr: "J+M chapter 5" 
+      tag: "jm5"
+      url: "https://web.stanford.edu/~jurafsky/slp3/5.pdf"
       optional: false
     - author: Omer Levy, Yoav Goldberg, and Ido Dagan
       title: "Improving Distributional Similarity with Lessons Learned from Word Embeddings"
