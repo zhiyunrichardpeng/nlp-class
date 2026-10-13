@@ -24,40 +24,41 @@ Please submit your conceptual question to Gradescope and your programming questi
 
 ## Getting Started
 
-If you have already cloned my homework repository `nlp-class-hw` for
-previous homeworks then go into that directory and update the directory:
+Use the public starter repository below and your group's existing SFU GitHub repository. Replace `USER` and `GROUP` with the repository owner's SFU username and your group name. Run these commands from a parent directory that will contain both repositories.
 
-    git pull origin/master
-    cd nlp-class-hw/bertchunker
-
-If you don't have that directory anymore then simply clone the
-repository again:
+For a fresh starter checkout:
 
     git clone https://github.com/zhiyunrichardpeng/nlp-class-hw.git
 
-Clone your own repository from Github if you haven’t done it already:
+To update an existing starter checkout instead, first save any local work, then run from its parent directory:
+
+    git -C nlp-class-hw pull --ff-only origin master
+
+Clone your group repository if necessary:
 
     git clone git@github.sfu.ca:USER/nlpclass-{{ site.semcode }}-g-GROUP.git
 
-Note that the `USER` above is the SFU username of the person in
-your group that set up the Github repository.
+Copy the **contents** of `nlp-class-hw/bertchunker/` into `nlpclass-{{ site.semcode }}-g-GROUP/hw2/`. The `hw2` directory should directly contain `answer/`, `data/`, `requirements.txt`, `zipout.py`, `zipsrc.py`, and `check.py`; do not add another nested `bertchunker` directory. Preserve any work already in your group's `hw2` directory. Run all remaining commands with `hw2` as the current directory.
 
-Then copy over the contents of the `bertchunker` directory into your
-`hw2` directory in your repository.
-
-Set up the virtual environment:
+Use Python 3.10 or later. On Linux/macOS, create and activate the environment:
 
     python3.10 -m venv venv
     source venv/bin/activate
-    pip3 install -r requirements.txt
+    python -m pip install -r requirements.txt
 
-You must use Python 3.10 (or later) for this homework.
+If Python 3.10 is not your executable's name, substitute your installed Python 3.10-or-later executable. On later sessions, activate the existing environment again.
 
-Note that if you do not change the requirements then after you have
-set up the virtual environment `venv` you can simply run the following
-command to get started with your development for the homework:
+On Windows PowerShell, you can use the environment directly:
 
-    source venv/bin/activate
+    py -3 -m venv venv
+    .\venv\Scripts\python.exe --version
+    .\venv\Scripts\python.exe -m pip install -r requirements.txt
+
+Confirm the version is at least 3.10. For each later `python3` command, use `.\venv\Scripts\python.exe` on Windows. In addition, pass the Windows interpreter to `zipout.py`:
+
+    .\venv\Scripts\python.exe zipout.py -x .\venv\Scripts\python.exe
+
+`zipout.py` otherwise looks for the Unix path `venv/bin/python3`. Keep the environment and model checkpoints out of your Git commits.
 
 ## Background
 
@@ -82,11 +83,11 @@ can be divided into phrasal chunks as follows[^1]:
 
 ## Data set
 
-The train and test data consist of three columns separated by spaces.
+The training data has three columns separated by whitespace. The supplied development and test input files have two columns (word and part-of-speech tag); the development chunk labels are provided separately in `data/reference/dev.out`.
 Each word has been put on a separate line and there is an empty
 line after each sentence.
 
-The first column contains the current word, the second column is
+In the training data, the first column contains the current word, the second column is
 the part-of-speech tag for that word, and the third column is
 the chunk tag.
 
@@ -112,9 +113,7 @@ Here is an example of the file format:
 The chunk tags contain the name of the chunk type, for example I-NP
 for noun phrase words and I-VP for verb phrase words.  Most chunk
 types have two types of chunk tags, B-CHUNK for the first word of
-the chunk and I-CHUNK for each other word in the chunk. See the
-Appendix below for a detailed description of the part-of-speech
-tags and the chunk tags in this data set. The full set of tags
+the chunk and I-CHUNK for each other word in the chunk. The full set of tags
 for this task is in the file `data/tagset.txt`.
 
 The sequence of labels, `B-NP`, ..., `I-NP` represents a single
@@ -167,9 +166,10 @@ this:
 
 As you see the words have been infected with noise so
 that it contains several spelling mistakes, e.g. `Rockwell` 
-is now `Rqckwell`. The training data is clean and any
-model trained on the training data will treat these 
-noisy words as unknown words.
+is now `Rqckwell`. The training data is clean, so these spelling
+variations may be unfamiliar to the model. The subword tokenizer
+can split a noisy word into pieces instead of treating every noisy
+word as an unknown token.
 
 The input files do not have the output chunk labels
 which appear in `data/reference/dev.out` for input `data/input/dev.txt`.
@@ -184,29 +184,59 @@ The data files provided are:
 
 ## Default solution
 
-The default solution is provided in `answer/default.py`. To use the default
-as your solution:
+The default solution is provided in `answer/default.py`. From `hw2`, copy it
+as the starting point for your solution:
 
-    cd answer
-    cp default.py bertchunker.py
-    cp default.ipynb bertchunker.ipynb
-    cd ..
+    cp answer/default.py answer/bertchunker.py
+    cp answer/default.ipynb answer/bertchunker.ipynb
+
+Keep any existing solution and notebook before copying. If you have a
+checkpoint from an earlier starter, regenerate it with the corrected
+starter before running `zipout.py`:
+
+    python3 answer/default.py --force > output.txt
+
+This trains a fresh baseline and replaces `data/chunker.pt` and the matching
+epoch checkpoints. Back up any previous experiment checkpoints first.
+On Windows, train without shell redirection, then collect and check the
+baseline predictions with the supplied scripts:
+
+    .\venv\Scripts\python.exe answer/default.py --force
+    .\venv\Scripts\python.exe zipout.py -r default.py -x .\venv\Scripts\python.exe -o baseline-output -z baseline-output
+    .\venv\Scripts\python.exe check.py -z baseline-output.zip
+
+Check `baseline-output/dev.ret` and `baseline-output/test.ret` for `0`.
+This avoids the different output encoding used by older PowerShell versions
+for `>` redirection. The `output.txt` / `conlleval.py` examples below are for
+Linux/macOS; use the archive-based commands above on Windows.
+
+After changing your own model or training settings, use
+`python3 answer/bertchunker.py --force > output.txt` to regenerate its checkpoint.
+On Windows, use `.\venv\Scripts\python.exe answer/bertchunker.py --force`
+without redirection, followed by the Windows `zipout.py` command above under
+Getting Started. Keep your baseline and method results separately for comparison.
+The short form of `--force` is `-f`.
+
+Then generate and check the outputs:
+
     python3 zipout.py
     python3 check.py
 
 The default solution will look for the file `chunker.pt`
 in the data directory. If it does not find this file it
-will start training on the `data/train.txt.gz` file. This
-will take about 15-20 minutes.
+will start training on `data/train.txt.gz`. Training time depends on the device and configuration; allow substantially more time on a CPU. The program also downloads the base model and tokenizer when they are not cached.
 
-You can also download the [`chunker.pt` model
+The original [`chunker.pt` model
 file](https://drive.google.com/file/d/1OY_NKo0vxS2ndttdfpqGyMo0PubbhIK3/view?usp=sharing)
-that was trained using `default.py`.
+was trained using an earlier starter. It is retained as a historical
+reference; the corrected starter rejects legacy checkpoints that do not
+record compliance with the frozen encoder policy. Train a fresh baseline
+with the command above for your comparisons and report the measured results.
 
 Please do not commit the file into your git repository as it is
 moderately large and you can go over your disk quota. 
 
-If you have a `chunker.pt` in the `data` directory then you can simply run:
+Once you have trained the corrected baseline at `data/chunker.pt`, you can run:
 
     python3 answer/default.py > output.txt
 
@@ -214,7 +244,7 @@ And then you can check the score on the dev output file called `output.txt` by r
 
     python3 conlleval.py -o output.txt
 
-which produces the following detailed evaluation:
+For historical context, the earlier instructions reported the following detailed evaluation. This is a historical reference result, not a measured score for a newly trained model with a frozen encoder:
 
     processed 23663 tokens with 11896 phrases; found: 11847 phrases; correct: 10764.
     accuracy:  94.01%; (non-O)
@@ -231,7 +261,7 @@ which produces the following detailed evaluation:
     (90.85844517599392, 90.48419636852724, 90.67093459124794)
 
 For this homework we will be scoring your solution based on the FB1 score
-which is described in detail in the Accuracy section below. However the FB1
+which is described in detail in the Check your performance section below. However the FB1
 score is not the only focus. You can focus on efficiency, model size, 
 experimental comparison with other approaches and many other choices.
 
@@ -244,21 +274,15 @@ zero marks.
 
 ### The default model
 
-The model used in `answer/default.py` is a BERT-based Transformer
-model that is fine-tuned to predict the phrase chunking tags 
-for each (sub-word) token. It is trained on the data provided
-in `data/train.txt.gz` which has the ground truth phrase tags
-for each token and these sentences are used to fine-tune the
-BERT model.
+The model uses the `distilbert-base-uncased` Transformer encoder and a
+classification head that predicts a chunk tag for each subword token.
+For this homework, keep the pretrained encoder weights frozen and train
+the classification head (and any added components) using the ground-truth
+chunk tags in `data/train.txt.gz`.
 
-The model structure can be examined using the following code,
-assuming that you are in the `nlp-class-hw/chunker` directory or
-if you have the `data` directory in your current directory with the
-training data and the model file:
+After training the corrected baseline at `data/chunker.pt`, inspect its model structure from the `hw2` directory:
 
-    from default import *
-    chunker = FinetuneTagger('data/chunker', '.pt', 'distilbert-base-uncased')
-    print(chunker.model_str())
+    python3 answer/model.py
 
 This prints out the model:
 
@@ -295,15 +319,21 @@ This prints out the model:
       (classification_head): Linear(in_features=768, out_features=22, bias=True)
     )
 
-Optimizing the above parameters to find the minimum loss on the
-training data by gradient descent is done automatically using Pytorch
-API calls in `answer/default.py`.
+Use PyTorch to optimize the trainable head and any added components on
+the training data. The pretrained encoder parameters must remain frozen.
 
 ### Hyperparameters
 
-For this homework we will enforce that the base BERT model should not
-be changed. Use `distilbert-base-uncased` as your base BERT model.
-You can change the fine-tuning model and parameters as you wish.
+Use `distilbert-base-uncased` as the fixed base model. Freeze all of its
+pretrained encoder parameters throughout training; do not replace the
+base model or update its weights. You may change and train the layers
+on top of the encoder, including the classification head and any new
+components you add.
+
+You may tune training hyperparameters, including the learning rate,
+number of epochs, and batch size. You may also tune hyperparameters of
+your added components. Record your settings and comparison results in
+`answer/bertchunker.ipynb`.
 
 ### Pytorch
 
@@ -318,13 +348,14 @@ Some useful links if you feel lost at the beginning:
 * [60 mins intro to Pytorch](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)
 * [Introduction to the transformers library](https://huggingface.co/docs/transformers/notebooks)
 
-Read the source code in `default.py` in detail.
+Read the source code in `answer/default.py` in detail.
 
 ## The Challenge
 
-Your task is to _improve the accuracy as much as possible while
-keeping the hyperparameters used in the default solution for the
-phrasal chunker_. The score is explained in detail in the Accuracy
+Your task is to _improve robust phrasal chunking while keeping the
+`distilbert-base-uncased` encoder fixed and frozen_. You may tune training
+hyperparameters and train or improve the layers on top, as described above.
+The score is explained in detail in the Check your performance
 section below. With substantial computational resources and using
 large pre-trained models (which are beyond the scope of this homework)
 the [state of the art accuracy on this
@@ -346,15 +377,18 @@ of the fine-tuned model:
 
 1. Deal with misspellings in the dev and test data using adversarial training (more details below).
 1. Use more than the last layer of the Transformer since lower layers of a pre-trained LLM tend to reflect "syntax" while higher levels tend to reflect "semantics" (waving hands profusely).
-1. Use two different optimizers with different learning rates for the pre-trained encoder layers and the classification head layer. For instance, the classification head parameters might be better learned with an SGD optimizer and a learning rate of $$0.1$$.
+1. Experiment with optimizers and learning rates for the trainable classification head or other added components. Keep the pretrained encoder weights frozen.
 1. Improve the classification head using either:
     1. multi-layer perceptron (MLP)
     1. CRF
     1. mini-Transformer.
 
-You only need to try one or two of these ideas to improve your model
-for this homework. Dealing with misspellings should be sufficient to
-get an F-score of higher than 94 on the dev set.
+Choose one or two improvement ideas for your model; these may include
+MLP or CRF. Separately, your notebook must compare the fixed set of
+baseline (linear head), MLP, and CRF models, plus any other methods you
+attempt. Use the same fixed, frozen base encoder for these comparisons.
+Report the dev scores you actually obtain; no improvement idea guarantees
+a particular score.
 
 ### Dealing with Misspellings
 
@@ -383,60 +417,37 @@ You can experiment with `lin1` having more parameters than the input or fewer pa
 
 ### CRF Layer
 
-A Conditional Random Field (CRF) layer can look at consistent labels
-(e.g. `I` tags always follow `B` tags for the same span, and other
-such consistencies) and produce more coherent label sequences.
+A linear-chain Conditional Random Field (CRF) scores a complete label
+sequence using emission scores from the classification head and learned
+transition scores between labels.
 
-For an input sequence $$\mathbf{x} = (x_{1}, \ldots, x_{n})$$ and a sequence
-of predictions for the output labels $$\mathbf{y} = (y_{1}, \ldots, y_{n})$$
-we define a score for the output sequence of labels to be:
+For a sentence of length $$n$$, let $$E_{i,k}$$ be the emission score for
+tag $$k$$ at token $$i$$ and $$A_{j,k}$$ a transition score from tag $$j$$
+to tag $$k$$. With separate start and end scores, define
 
-<p>$$\textit{score}(\mathbf{x}, \mathbf{y}) = \sum_{i=0}^n C_{y_{i-1},y_{i}} + \sum_{i=1}^n P_{i,y_{i}}$$</p>
+<p>$$s(\mathbf{x},\mathbf{y}) = A_{\mathrm{START},y_1}+\sum_{i=1}^{n}E_{i,y_i}+\sum_{i=2}^{n}A_{y_{i-1},y_i}+A_{y_n,\mathrm{END}}.$$</p>
 
-The log probability we want to compute is:
+The conditional log probability is
 
-<p>$$\textit{log}(g(\mathbf{y} | \mathbf{x})) =  \textit{log}(\textit{softmax}_{\mathbf{x}}(\textit{score}(\mathbf{x}, \mathbf{y})))$$</p>
+<p>$$\log p(\mathbf{y}\mid\mathbf{x})=s(\mathbf{x},\mathbf{y})-\log\sum_{\mathbf{y}'\in\mathcal{Y}(\mathbf{x})}\exp s(\mathbf{x},\mathbf{y}').$$</p>
 
-where $$C(y_{i-1},y_{i})$$ (or $$C_{i-1}$$ for short) is the
-transition probability from the labels in the previous time step
-to the labels in the current time step $$i$$ and $$P_{i,y_{i}}$$
-(or $$p(y_{i})$$ for one position and $$p(\mathbf{y})$$ for the
-entire sequence)  is the probability of producing label $$y_{i}$$
-at time step $$i$$. The `softmax` over the sequence $$\mathbf{x}$$
-is computed using `tag_space` from `default.py` as follows:
-`tag_scores = softmax(tag_space, dim=-1)` (compare with how
-`tag_scores` is computed in `default.py`).
+Here, $$\mathcal{Y}(\mathbf{x})$$ is the set of candidate label sequences
+for the input. The normalization ranges over label sequences, not input
+tokens. Train by minimizing the negative log probability of the gold
+sequence, using the forward algorithm to compute the normalization, and
+decode the highest-scoring sequence with Viterbi. Independent per-token
+`argmax` is not CRF decoding. Transition and emission values are scores,
+not probabilities to add after separate softmax operations.
 
-Let $$n$$ be the length of the sentence aka ``tag_scores.size(1)``,
-$$B$$ be the batch size aka ``tag_scores.size(0)``, `tagset_size`
-is the same as ``tag_scores.size(3)``, and let $$C_{i-1}$$ be the
-new variable to store the probability distribution over pairs of
-labels (commented out, but called `crf_layer` in `default.py`).
+In the starter, `tag_space` has shape `[batch, length, number_of_tags]`;
+the tag dimension is `size(-1)` (or `size(2)`), not `size(3)`. Keep padding
+out of the sequence score and loss with a valid-token mask. Use explicit
+start/end states rather than connecting the first token to the last.
+Preserve the mapping between subwords and output words. BIO constraints,
+if imposed, should allow both `B-X` followed by `I-X` and `I-X` followed
+by `I-X` within a span.
 
-You can compute $$\mathbf{y}$$ by calling `tag_scores.argmax(-1)`.
-Note that because of batching it has two subscripts $$y_{b,i}$$
-where $$b$$ is each sentence in the batch and $$i$$ is the position
-in that sentence.
-
-Here is a pseudo-code for the `forward` function in `TransformerModel`
-which includes a CRF layer that you can add to `default.py` assuming
-`tag_space` is computed as before (also see the comments in the code).
-
-1. For $$b$$ in $$B$$ and $$i$$ in $$n$$
-   1. $$C_{b,i-1} = C(y_{b,i-1})$$ (you will need to use `unsqueeze(0)` here to create a tensor that can be used to concatenate for all $$b$$ values).
-   1. $$C_{i-1} = \textit{softmax}([ C_{1,i-1}, \ldots, C_{B,i-1} ])$$ (you will need to use `unsqueeze(0)` here as well).
-   1. $$g_{i} = C_{i-1} + p(y_{i})$$ which computes $$\textit{softmax}(\textit{score}(\mathbf{x}, \mathbf{y}))$$ for the entire batch and $$p(y_{i})$$ is given by `tag_scores[:, i, :]`.
-1. return $$g = \textit{log}([ g_{0}, \ldots, g_{n} ])$$ (here the concatenation happens for `dim=1` which is the sentence length).
-
-Each time the pseudo-code uses $$[ v_{1} \ldots v_{q} ]$$ for some
-tensors $$v_{i}$$ it means you should use `torch.cat` to concatenate
-the vectors. You can create an array and append to it for each
-$$v_{i}$$ and call `torch.cat` on that array.  For the corner case
-of $$C_{b,0}$$ which is the first token in the sentence for each
-$$b$$ in the batch you can use $$C_{b,n}$$ as the previous time
-step since $$C_{b,-1}$$ doesn't exist.
-
-The paper that introduced the use of a CRF layer in neural networks is:
+A reference for neural sequence labeling with a CRF layer is:
 
 > [Neural Architectures for Named Entity Recognition](https://arxiv.org/abs/1603.01360). Guillaume Lample, Miguel Ballesteros, Sandeep Subramanian, Kazuya Kawakami, Chris Dyer. NAACL 2016.
 
@@ -444,21 +455,16 @@ Based on the original CRF paper (which you don't really need to dive into but li
 
 > [Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data](https://dl.acm.org/doi/10.5555/645530.655813). John Lafferty, Andrew McCallum, Fernando Pereira. ICML 2001.
 
-**Some caveats**: Implementing a CRF layer is a good exercise since
-it is complicated to implement and will teach you a lot of PyTorch.
-However, while many state of the art (SOTA) implementations use a
-CRF layer, the representation power of a CRF layer is likely
-superseded by the representations learned using self-attention
-already in the BERT encoder. Instead of using a CRF layer, it might
-be easier and more accurate to use multi-head self attention in the
-classification head.
+Implementing a CRF layer is a useful PyTorch exercise. Compare its measured
+performance and errors against the baseline and MLP models in your notebook.
+You may also investigate a head with self-attention as an additional method.
 
 ## Required files
 
 You must create the following files:
 
-* `answer/bertchunker.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
-* `answer/bertchunker.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
+* `answer/bertchunker.py` -- your solution, starting from `answer/default.py` as explained above.
+* `answer/bertchunker.ipynb` -- your notebook report, including documentation and analysis. No separate `report.pdf` is required for HW2-P.
 
 ## Run your solution on the data files
 
@@ -492,20 +498,17 @@ evaluate your output on the test input after the submission deadline.
 
 ## Preparing your python notebook to clearly document what you have done
 
-You should prepare a clear summary of what you did in this assignment.  For your documentation and analysis should be organized into clear sections, with grammatical English (full sentences).  Use figures, graphs, tables to compare results of different experiments.  
+Prepare a clear summary of what you did in `answer/bertchunker.ipynb`, which serves as your report. Organize the documentation and analysis into clear sections, with full sentences. Use figures, graphs, and tables to compare experimental results.
 
 The documentation and analysis in your python notebook should include the following:
 <!-- * Group name with names of group members -->
 * A short **description of the task** (e.g. the problem you are solving) in your own words.  Make sure to indicate what is the expected input and output.   
-* Short description of your method 
-* Results (both quantitative and qualitative) comparing your method to the baseline (default) solution.   For  qualitative results, you should include some illustrative examples of the baseline vs your solution. For quantitative results, you would present tables/figures comparing how well the different methods performed (e.g. report and compare the accuracy of the baseline and your method). 
+* A short description of your method, the layers you trained, and the hyperparameter settings used in each experiment.
+* Results (both quantitative and qualitative) comparing the required models and your method. Include illustrative examples of their predictions and errors. Use tables or figures to compare chunk-level precision, recall, and FB1 scores on the dev set.
 * Discussion of alternative methods you tried and how well they worked (or didn't work).  
 <!-- * Breakdown of contributions by each group member -->
 
-You should compare the performance of the default solution, vs using the MLP layer or CRF layer, vs any other methods you attempted.  You should discuss which approach worked the best and what errors were made by different approaches.
-
-<!-- You can optionally prepare a short (1-2 pages) pdf.  Your report should be submitted as `report.pdf` to [{{site.hwp-report-submit.name}}]({{site.hwdates[2].hwp-report-submit-url}}).
-Using LaTex for preparing your reports is recommended (see [Overleaf](https://www.overleaf.com) for online editing of LaTex documents), but not required. -->
+Compare all three required models: the baseline with a linear classification head, an MLP head, and a CRF model. Include any other methods you attempted. Keep the base encoder fixed and frozen in all comparisons, document differences in training settings, and discuss which approach worked best and what errors the approaches made. Your one or two chosen improvement ideas may use MLP or CRF, but do not replace the required comparison set.
 
 ## Submit your homework on {{ site.hwsubmit.name }}
 
@@ -519,6 +522,8 @@ the `output.zip` for upload to Coursys using:
 
     python3 zipout.py
 
+Before uploading, check that `output/dev.ret` and `output/test.ret` both contain `0`. Inspect `output/dev.err` and `output/test.err` if a run failed. The presence of `output.zip` alone does not establish that both runs succeeded.
+
 ### Create source.zip
 
 To create the `source.zip` file for upload to {{ site.hwsubmit.name }} do:
@@ -527,11 +532,12 @@ To create the `source.zip` file for upload to {{ site.hwsubmit.name }} do:
 
 You must have the following files or `zipsrc.py` will complain about it:
 
-* `answer/bertchunker.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
-* `answer/bertchunker.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
+* `answer/bertchunker.py` -- your solution, starting from `answer/default.py` as explained above.
+* `answer/bertchunker.ipynb` -- your notebook report, including documentation and analysis.
 
-In addition, each group member should write down a short description of what they
-did for this homework in `answer/README.username`.
+In addition, each group member should write a short description of their contribution in `answer/README.username`, replacing `username` with their own SFU ID. `zipsrc.py` checks for the Python and notebook filenames but does not check that every member has a contribution file; check these yourself.
+
+`source.zip` contains the contents of `answer/` at its archive root. Include any helper Python files your solution imports and an `answer/requirements.txt` if your dependencies differ from the starter. Inspect the archive before uploading to ensure these files and all contribution statements are included.
 
 ### Upload to {{ site.hwsubmit.name }}
 
@@ -540,7 +546,7 @@ Go to `Programming Homework 2` on {{ site.hwsubmit.name }} and do a group submis
 * Upload `output.zip` and `source.zip` to [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}/+hwp2/)
 * Make sure you have documented your approach and analysis in `answer/bertchunker.ipynb` (which serves as your report).
 * Check if each group member has a `answer/README.username`.
-* Make sure that your have updated your Github repository with your submission source code.
+* Update your group GitHub repository with the same source and notebook files that you submit to Coursys. After uploading, verify that the submission lists both archives and that your group is correct.
 
 ## Grading
 
