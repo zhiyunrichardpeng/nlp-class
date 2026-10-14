@@ -100,11 +100,11 @@
   num: 6
   dates:
   - date: "10/14" 
-    title: "Transformers"
-    lecture: "transformers"
+    title: "Sequence Models (HMMs)"
+    lecture: "hmm"
     leclinks:
-      - name: "L12-transformers"
-        url: "assets/lecture-slides/L12-transformers.pdf"
+      - name: "L9-sequence-modeling P68 done (Updated Oct 14th)"
+        url: "assets/lecture-slides/L9-sequence-modeling P68 done.pptx"
   - date: "10/16" 
     title: "Pretraining LLMs"
     lecture: "llms"
