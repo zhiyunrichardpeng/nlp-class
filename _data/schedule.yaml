@@ -78,21 +78,19 @@
   num: 5
   dates:
   - date: "10/7"
-    title: "Neural Sequence Modeling (LSTM/GRU)"
-    lecture: "rnn"
+    title: "Word2Vec"
+    lecture: "wordvec2"
     leclinks:
-      - name: "L10-LSTM-GRU"
-        url: "assets/lecture-slides/L10-LSTM-GRU.pdf"
+      - name: "L6-word2vec (Updated Oct 8th)"
+        url: "assets/lecture-slides/L6-word2vec.pptx"
     hwdue: "1"
     hwout: "2"
   - date: "10/9" 
-    title: "Sequence generation, attention, and intro to transformers"
-    lecture: "seq2seq"
+    title: "Word2Vec"
+    lecture: "wordvec2"
     leclinks:
-      - name: "L11-sequence-generation"
-        url: "assets/lecture-slides/L11-sequence-generation.pdf"
-      - name: "L12-transformers"
-        url: "assets/lecture-slides/L12-transformers.pdf"
+      - name: "L6-word2vec (Updated Oct 8th)"
+        url: "assets/lecture-slides/L6-word2vec.pptx"
   - date: "10/9" 
     tutorial: 4
 
@@ -103,14 +101,16 @@
     title: "Sequence Models (HMMs)"
     lecture: "hmm"
     leclinks:
-      - name: "L9-sequence-modeling P68 done (Updated Oct 14th)"
-        url: "assets/lecture-slides/L9-sequence-modeling P68 done.pptx"
+      - name: "L9-sequence-modeling -zp (Updated Oct 16th)"
+        url: "assets/lecture-slides/L9-sequence-modeling -zp.pptx"
   - date: "10/16" 
-    title: "Pretraining LLMs"
-    lecture: "llms"
+    title: "Neural Sequence Modeling (RNNs & LSTMs/GRUs)"
+    lecture: "rnn"
     leclinks:
-      - name: "L14-pretraining"
-        url: "assets/lecture-slides/L14-pretraining.pdf"
+      - name: "L10-1-RNN-repaird-P29 done (Updated Oct 16th)"
+        url: "assets/lecture-slides/L10-1-RNN-repaird-P29 done.pptx"
+      - name: "L10-LSTM-GRU"
+        url: "assets/lecture-slides/L10-LSTM-GRU.pdf"
   - date: "10/16" 
     tutorial: 5
 
