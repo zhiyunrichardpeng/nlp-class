@@ -107,8 +107,8 @@
     title: "Neural Sequence Modeling (RNNs & LSTMs/GRUs)"
     lecture: "rnn"
     leclinks:
-      - name: "L10-1-RNN-repaird-P29 done (Updated Oct 16th)"
-        url: "assets/lecture-slides/L10-1-RNN-repaird-P29 done.pptx"
+      - name: "L10-1-RNN-repaird-P51 done (Updated Oct 16th)"
+        url: "assets/lecture-slides/L10-1-RNN-repaird-P51 done.pptx"
       - name: "L10-LSTM-GRU"
         url: "assets/lecture-slides/L10-LSTM-GRU.pdf"
   - date: "10/16" 
