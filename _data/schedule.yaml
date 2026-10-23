@@ -104,13 +104,11 @@
       - name: "L9-sequence-modeling -zp (Updated Oct 16th)"
         url: "assets/lecture-slides/L9-sequence-modeling -zp.pptx"
   - date: "10/16" 
-    title: "Neural Sequence Modeling (RNNs & LSTMs/GRUs)"
+    title: "Neural Sequence Modeling (RNNs)"
     lecture: "rnn"
     leclinks:
-      - name: "L10-1-RNN-repaird-P51 done (Updated Oct 16th)"
-        url: "assets/lecture-slides/L10-1-RNN-repaird-P51 done.pptx"
-      - name: "L10-LSTM-GRU"
-        url: "assets/lecture-slides/L10-LSTM-GRU.pdf"
+      - name: "L10-RNN-zp (Updated Oct 23rd)"
+        url: "assets/lecture-slides/L10-RNN-zp.pptx"
   - date: "10/16" 
     tutorial: 5
 
@@ -121,9 +119,13 @@
     title: "Midterm Exam"
     lecture: "midterm"
   - date: "10/23" 
-    title: "Tasks, benchmarks and project information"
+    title: "Neural Sequence Modeling (LSTM/GRU), Sequence-to-Sequence Models, and Project Information"
     lecture: "tasks"
     leclinks:
+      - name: "L11a-LSTM-GRU-zp (Updated Oct 23rd)"
+        url: "assets/lecture-slides/L11a-LSTM-GRU-zp.pptx"
+      - name: "L11b-sequence-generation P22 done (Updated Oct 23rd)"
+        url: "assets/lecture-slides/L11b-sequence-generation P22 done.pptx"
       - name: "project-information"
         url: "assets/lecture-slides/project-information.pdf"
       - name: "benchmarks"
