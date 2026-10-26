@@ -226,12 +226,9 @@ The default solution will look for the file `chunker.pt`
 in the data directory. If it does not find this file it
 will start training on `data/train.txt.gz`. Training time depends on the device and configuration; allow substantially more time on a CPU. The program also downloads the base model and tokenizer when they are not cached.
 
-The original [`chunker.pt` model
+You can also download the [`chunker.pt` model
 file](https://drive.google.com/file/d/1OY_NKo0vxS2ndttdfpqGyMo0PubbhIK3/view?usp=sharing)
-was trained using an earlier starter. It is retained as a historical
-reference; the corrected starter rejects legacy checkpoints that do not
-record compliance with the frozen encoder policy. Train a fresh baseline
-with the command above for your comparisons and report the measured results.
+that was trained using `default.py`.
 
 Please do not commit the file into your git repository as it is
 moderately large and you can go over your disk quota. 
@@ -244,7 +241,7 @@ And then you can check the score on the dev output file called `output.txt` by r
 
     python3 conlleval.py -o output.txt
 
-For historical context, the earlier instructions reported the following detailed evaluation. This is a historical reference result, not a measured score for a newly trained model with a frozen encoder:
+which produces the following detailed evaluation:
 
     processed 23663 tokens with 11896 phrases; found: 11847 phrases; correct: 10764.
     accuracy:  94.01%; (non-O)
@@ -274,13 +271,19 @@ zero marks.
 
 ### The default model
 
-The model uses the `distilbert-base-uncased` Transformer encoder and a
-classification head that predicts a chunk tag for each subword token.
-For this homework, keep the pretrained encoder weights frozen and train
-the classification head (and any added components) using the ground-truth
-chunk tags in `data/train.txt.gz`.
+The model used in `answer/default.py` is a BERT-based Transformer
+model (`distilbert-base-uncased`) that is fine-tuned to predict the phrase
+chunking tags for each (sub-word) token. It is trained on the data provided
+in `data/train.txt.gz` which has the ground truth phrase tags
+for each token and these sentences are used to fine-tune the
+BERT encoder along with the classification head.
 
-After training the corrected baseline at `data/chunker.pt`, inspect its model structure from the `hw2` directory:
+**Important Note on BERT**: Fine-tuning is expected—**do NOT freeze BERT**.
+BERT's parameters must remain in the optimizer and be fine-tuned along with
+the classification head. When BERT is frozen, the model cannot sufficiently adapt
+contextual embeddings to the chunking task, causing performance to drop significantly.
+
+After training the baseline at `data/chunker.pt`, inspect its model structure from the `hw2` directory:
 
     python3 answer/model.py
 
@@ -319,16 +322,19 @@ This prints out the model:
       (classification_head): Linear(in_features=768, out_features=22, bias=True)
     )
 
-Use PyTorch to optimize the trainable head and any added components on
-the training data. The pretrained encoder parameters must remain frozen.
+Optimizing the above parameters to find the minimum loss on the
+training data by gradient descent is done automatically using PyTorch
+API calls in `answer/default.py`. Both the encoder and classification head
+are updated during training.
 
 ### Hyperparameters
 
-Use `distilbert-base-uncased` as the fixed base model. Freeze all of its
-pretrained encoder parameters throughout training; do not replace the
-base model or update its weights. You may change and train the layers
-on top of the encoder, including the classification head and any new
-components you add.
+For this homework we will enforce that the base BERT model should not
+be changed: use `distilbert-base-uncased` as your base BERT model.
+However, you must fine-tune its parameters—do **not** freeze the encoder.
+You can change the fine-tuning architecture, hyperparameters (including
+learning rate, number of epochs, and batch size), and added layers/components
+as you wish.
 
 You may tune training hyperparameters, including the learning rate,
 number of epochs, and batch size. You may also tune hyperparameters of
@@ -352,9 +358,10 @@ Read the source code in `answer/default.py` in detail.
 
 ## The Challenge
 
-Your task is to _improve robust phrasal chunking while keeping the
-`distilbert-base-uncased` encoder fixed and frozen_. You may tune training
-hyperparameters and train or improve the layers on top, as described above.
+Your task is to _improve robust phrasal chunking by fine-tuning the
+`distilbert-base-uncased` model for the phrasal chunker_. You may tune training
+hyperparameters and improve the model architecture and training strategies,
+as described below.
 The score is explained in detail in the Check your performance
 section below. With substantial computational resources and using
 large pre-trained models (which are beyond the scope of this homework)
@@ -377,18 +384,16 @@ of the fine-tuned model:
 
 1. Deal with misspellings in the dev and test data using adversarial training (more details below).
 1. Use more than the last layer of the Transformer since lower layers of a pre-trained LLM tend to reflect "syntax" while higher levels tend to reflect "semantics" (waving hands profusely).
-1. Experiment with optimizers and learning rates for the trainable classification head or other added components. Keep the pretrained encoder weights frozen.
+1. Use two different optimizers with different learning rates for the pre-trained encoder layers and the classification head layer. For instance, the classification head parameters might be better learned with an SGD optimizer and a learning rate of $$0.1$$, while fine-tuning the BERT encoder with Adam and a smaller learning rate like $$5 \times 10^{-5}$$.
 1. Improve the classification head using either:
     1. multi-layer perceptron (MLP)
     1. CRF
     1. mini-Transformer.
 
-Choose one or two improvement ideas for your model; these may include
-MLP or CRF. Separately, your notebook must compare the fixed set of
-baseline (linear head), MLP, and CRF models, plus any other methods you
-attempt. Use the same fixed, frozen base encoder for these comparisons.
-Report the dev scores you actually obtain; no improvement idea guarantees
-a particular score.
+You only need to try one or two of these ideas to improve your model
+for this homework. In your notebook, compare your approaches (e.g., baseline
+vs. MLP / CRF / other methods) using the fine-tuned base encoder. Report
+the dev scores you actually obtain.
 
 ### Dealing with Misspellings
 
@@ -508,7 +513,7 @@ The documentation and analysis in your python notebook should include the follow
 * Discussion of alternative methods you tried and how well they worked (or didn't work).  
 <!-- * Breakdown of contributions by each group member -->
 
-Compare all three required models: the baseline with a linear classification head, an MLP head, and a CRF model. Include any other methods you attempted. Keep the base encoder fixed and frozen in all comparisons, document differences in training settings, and discuss which approach worked best and what errors the approaches made. Your one or two chosen improvement ideas may use MLP or CRF, but do not replace the required comparison set.
+Compare the performance of the default baseline solution vs using an MLP head, a CRF layer, or any other methods you attempted (all using the fine-tuned `distilbert-base-uncased` base model). Document differences in training settings, and discuss which approach worked best and what errors were made by the different approaches.
 
 ## Submit your homework on {{ site.hwsubmit.name }}
 
