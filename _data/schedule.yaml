@@ -153,7 +153,6 @@
     leclinks:
       - name: "L17-modern-llms"
         url: "assets/lecture-slides/L17-modern-llms.pdf"
-    hwdue: "3"
     hwout: "4"
   - date: "10/30" 
     tutorial: 7
@@ -175,6 +174,7 @@
     leclinks:
       - name: "L19-reasoning"
         url: "assets/lecture-slides/L19-reasoning.pdf"
+    hwdue: "3"
   - date: "11/6" 
     tutorial: 8
 
