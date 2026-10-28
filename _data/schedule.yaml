@@ -124,8 +124,8 @@
     leclinks:
       - name: "L11a-LSTM-GRU-zp (Updated Oct 23rd)"
         url: "assets/lecture-slides/L11a-LSTM-GRU-zp.pptx"
-      - name: "L11b-sequence-generation P22 done (Updated Oct 23rd)"
-        url: "assets/lecture-slides/L11b-sequence-generation P22 done.pptx"
+      - name: "L11b-sequence-generation-zp (Updated Oct 27th)"
+        url: "assets/lecture-slides/L11b-sequence-generation-zp.pptx"
       - name: "project-information"
         url: "assets/lecture-slides/project-information.pdf"
       - name: "benchmarks"
@@ -139,14 +139,11 @@
   num: 8
   dates:
   - date: "10/28" 
-    title: "Using LLMs: Prompting and parameter efficient fine-tuning"
-    lecture: "peft"
+    title: "Transformers and Self-Attention"
+    lecture: "transformers"
     leclinks:
-      - name: "L15-fewshot"
-        url: "assets/lecture-slides/L15-fewshot.pdf"
-      - name: "L16-peft"
-        url: "assets/lecture-slides/L16-peft.pdf"
-    readings: ["jm14", "jm15"]
+      - name: "L12-transformers P11 done (Updated Oct 28th)"
+        url: "assets/lecture-slides/L12-transformers P11 done.pptx"
     project: "Project proposal"
   - date: "10/30" 
     title: "Modern LLM architecture"
