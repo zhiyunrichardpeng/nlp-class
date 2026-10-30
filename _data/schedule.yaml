@@ -142,8 +142,8 @@
     title: "Transformers and Self-Attention"
     lecture: "transformers"
     leclinks:
-      - name: "L12-transformers P11 done (Updated Oct 28th)"
-        url: "assets/lecture-slides/L12-transformers P11 done.pptx"
+      - name: "L12-transformers-zp (Updated Oct 30th)"
+        url: "assets/lecture-slides/L12-transformers-zp.pptx"
     project: "Project proposal"
   - date: "10/30" 
     title: "Modern LLM architecture"
