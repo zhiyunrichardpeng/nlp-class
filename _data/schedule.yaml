@@ -158,13 +158,11 @@
   num: 9
   dates:
   - date: "11/4" 
-    lecture: "instruct_tuning"
-    title: "Posttraining - instruction tuning and preference alignment"
+    title: "Pretraining Language Models"
+    lecture: "llms"
     leclinks:
-      - name: "L18-instruct_tuning"
-        url: "assets/lecture-slides/L18-instruct_tuning.pdf"
-      - name: "L19-preference-alignment"
-        url: "assets/lecture-slides/L19-preference-alignment.pdf"
+      - name: "L14-pretraining P63 done (Updated Nov 4th)"
+        url: "assets/lecture-slides/L14-pretraining P63 done.pptx"
   - date: "11/6" 
     title: "Posttraining - preference alignment and reasoning"
     lecture: "preference"
