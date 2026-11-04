@@ -147,9 +147,6 @@
     project: "Project proposal"
   - date: "10/30" 
     title: "Modern LLM architecture"
-    leclinks:
-      - name: "L17-modern-llms"
-        url: "assets/lecture-slides/L17-modern-llms.pdf"
     hwout: "4"
   - date: "10/30" 
     tutorial: 7
