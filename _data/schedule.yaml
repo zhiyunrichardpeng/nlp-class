@@ -222,17 +222,19 @@
     leclinks:
       - name: "L24-grounding"
         url: "assets/lecture-slides/L24-grounding.pdf"
+    project: "Project video due (Dec 2)"
   - date: "12/4"
     title: "Final project presentations & Conclusion"
     lecture: "project"
     leclinks:
       - name: "L26-conclusion"
         url: "assets/lecture-slides/L26-conclusion.pdf"
+    project: "Final presentations (Dec 4)"
 
 - week: 
   num: "Exam"
   dates:
-  - date: "TBD"
-    title: "Final Exam"
+  - date: "12/13"
+    title: "Final Exam (12:00 PM – 2:00 PM at SSCC 9002)"
     lecture: "final"
-    project: "Final project report"
+    project: "Final project report & code"

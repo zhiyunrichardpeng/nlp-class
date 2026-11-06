@@ -147,9 +147,16 @@ activity upload `source.zip` and `output.zip` for your project.  These will not 
 
 Optionally, you can also upload `source.zip` and `output.zip` for your project.  These will not be graded. -->
 
-<!-- * Final Project Poster Session:
-    * Time: {{ site.hwdates[5].deadline }} {{ site.hwdates[5].time }}. 
-    * Location: {{ site.hwdates[5].location }} -->
+### Project Presentation and Video
+
+* **Final Project Presentations**:
+    * Time: {{ site.hwdates[5].poster }} ({{ site.hwdates[5].time }}), {{ site.hwdates[5].location }}.
+    * Shared PPT slides and presentation sequence: [Presentation Slides & Sequence](https://1sfu-my.sharepoint.com/:f:/g/personal/zpa18_sfu_ca/IgA5uRZsX7s3QqK-7oinOYWIAZ0WSIEKwxSJ3N23jo4N7sY?e=6hCEHa)
+    * Each group has a scheduled slot of 2 minutes for presentation plus 30 seconds for Q&A and transition.
+* **Project Video (due on {{ site.hwdates[5].video }})**:
+    * Due 2 days before the presentation (Dec 2, 2026).
+    * Length: Same length as the presentation (2 minutes).
+    * Format: Provide an accessible OneDrive link, Google Drive link, or YouTube link.
 
 ### Project Write-up (due on {{ site.hwdates[5].deadline }})
 
@@ -186,6 +193,8 @@ the following sections and **must** cover the following information:
     * What did you learn from your experiments?
     * What could be fixed in your approach. 
     * What you did not have time to finish, but you think would be a useful addition to your project.
+* Breakdown of Contributions
+    * Provide a clear breakdown of individual contributions made by each group member.
 * References
     * Provide references using BibTex
 

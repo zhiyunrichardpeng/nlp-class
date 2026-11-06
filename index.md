@@ -100,5 +100,5 @@ There will be optional TA led tutorials that will help review these topics.
 #### Exams
 * We will try to provide sample exams for midterm and final exam. 
 * A calculator and one page (double sided) cheat sheet are allowed. 
-* Final exam date is not determined.
+* Final Exam: Dec 13, 2026, 12:00 PM – 2:00 PM at SSCC 9002.
 
