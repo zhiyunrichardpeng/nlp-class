@@ -29,7 +29,7 @@ Please submit your conceptual question to Gradescope and your programming questi
 If you have already cloned my homework repository `nlp-class-hw` for
 previous homeworks then go into that directory and update the directory:
 
-    git pull origin/master
+    git pull origin master
     cd nlp-class-hw/prefixtune
 
 If you don't have that directory anymore then simply clone the
@@ -39,7 +39,7 @@ repository again:
 
 Clone your own repository from GitHub if you haven’t done it already:
 
-    git clone git@githubsfu.ca:USER/nlpclass-{{ site.semcode }}-g-GROUP.git
+    git clone git@github.sfu.ca:USER/nlpclass-{{ site.semcode }}-g-GROUP.git
 
 Note that the `USER` above is the SFU username of the person in
 your group that set up the Github repository.
@@ -55,6 +55,8 @@ Set up the virtual environment:
 
 You must use Python 3.10 (or later) for this homework.
 
+If `torch` does not detect your GPU, install the PyTorch build that matches your CUDA driver (see [pytorch.org](https://pytorch.org/get-started/locally/)).
+
 Note that if you do not change the requirements then after you have
 set up the virtual environment `venv` you can simply run the following
 command to get started with your development for the homework:
@@ -69,7 +71,7 @@ predicts the next token based on the left context (also called a
 causal language model when there is a distinct input and output but
 is trained and decoded as if it was a left to right LM).
 
-We will be using a text to table task, which takes structured data
+We will be using a table to text task, which takes structured data
 in the form of a table and produces a text description of what is
 in the data.
 
@@ -122,10 +124,10 @@ The [leaderboard](https://paperswithcode.com/sota/table-to-text-generation-on-e2
 
 The data files provided are:
 
-* `data/train.txt.gz` -- the training data used to train the `answer/default.py` model (`default.py` uses the [huggingface dataset for E2E](https://huggingface.co/datasets/e2e_nlg) to load the data but a copy of the training data is provided just in case).
-* `data/input` -- input files `dev.txt` and `test.txt` infected with noise. a subset of `dev.txt` is provided as `small.txt` for development of your solution.
+* `data/train.txt.gz` -- the training data used to train the `answer/default.py` model (`default.py` uses the [huggingface dataset for E2E](https://huggingface.co/datasets/e2e_nlg_cleaned) to load the data but a copy of the training data is provided just in case).
+* `data/input` -- input files `dev.txt` and `test.txt`. A subset of `dev.txt` is provided as `small.txt` for development of your solution.
 * `data/reference/dev.out` -- the reference output for the `dev.txt` input file
-* `data/reference/small.out` -- the reference output for the `dev.txt` input file
+* `data/reference/small.out` -- the reference output for the `small.txt` input file
 
 ## Default solution
 
@@ -162,6 +164,8 @@ And then you can check the score on the dev output file called `output.txt` by r
 which produces the evaluation as a BLEU score:
 
     bleu score: 1.3688755959761818
+
+The default solution samples during decoding, so your baseline score will vary slightly from run to run.
 
 For this homework we will be scoring your solution based on the BLEU score
 which is described in detail in the Accuracy section below. However the BLEU
@@ -268,7 +272,7 @@ on the discussion board and it is approved by the instructor.
 
 You must create the following files:
 
-* `answer/prefixtune.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
+* `answer/prefixtune.py` -- this is your solution to the homework. start by copying `default.py` as explained above.
 * `answer/prefixtune.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
 
 ## Run your solution on the data files
@@ -336,10 +340,10 @@ To create the `source.zip` file for upload to {{ site.hwsubmit.name }} do:
 
 You must have the following files or `zipsrc.py` will complain about it:
 
-* `answer/prefixtune.py` -- this is your solution to the homework. start by copying `default.py` as explained below.
+* `answer/prefixtune.py` -- this is your solution to the homework. start by copying `default.py` as explained above.
 * `answer/prefixtune.ipynb` -- this is the iPython notebook that will be your write-up for the homework.
 
-Each group member should write about what they did for this homework in the Python notebook.
+In addition, each group member should write a short description of their contribution in `answer/README.username`, replacing `username` with their own SFU ID.
 
 ### Upload to {{ site.hwsubmit.name }}
 
@@ -347,7 +351,7 @@ Go to `Programming Homework 4` on {{ site.hwsubmit.name }} and do a group submis
 
 * Upload `output.zip` and `source.zip` to [{{ site.hwsubmit.name }}]({{ site.hwsubmit.url }}/+hwp4/)
 * Make sure you have documented your approach and analysis in `answer/prefixtune.ipynb` (which serves as your report).
-* Make sure each member of your group has documented their contribution to this homework in the Python notebook.
+* Check if each group member has a `answer/README.username`.
 
 ## Grading
 
