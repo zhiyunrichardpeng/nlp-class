@@ -69,7 +69,7 @@ hwdates:
     hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "4"
     startdate: "Oct 30, 2026"
-    deadline: "Nov 20, 2026"
+    deadline: "Nov 25, 2026"
     hwc-url: "https://coursys.sfu.ca/2026fa-cmpt-713-x1/"
   - hw: "project"
     report-submit-name: "Coursys"

@@ -194,7 +194,6 @@
     leclinks:
       - name: "L21-project-tips-analysis"
         url: "assets/lecture-slides/L21-project-tips-analysis.pdf"
-    hwdue: "4"
   - date: "11/20" 
     title: "Information retrieval and RAG"
     lecture: "rag"
@@ -210,6 +209,7 @@
   - date: "11/25"
     title: "Spare class"
     project: "Project milestone"
+    hwdue: "4"
   - date: "11/27" 
     title: "Spare class"
 
