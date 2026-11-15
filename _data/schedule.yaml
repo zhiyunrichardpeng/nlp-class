@@ -177,11 +177,10 @@
     noclass: true
     title: "No class - Remembrance Day"
   - date: "11/13" 
-    title: "Scaling laws and data"
-    lecture: "scaling-laws"
+    title: "Advanced topics: CNN, VAE, GAN, and Diffusion"
     leclinks:
-      - name: "L20-scaling"
-        url: "assets/lecture-slides/L20-scaling.pdf"
+      - name: "L16-CNN-VAE-DIFFUSION (Updated Nov 13th)"
+        url: "assets/lecture-slides/L16-CNN-VAE-DIFFUSION.pptx"
   - date: "11/13" 
     tutorial: 9
 
