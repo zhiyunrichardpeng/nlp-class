@@ -188,17 +188,9 @@
   num: 11
   dates:
   - date: "11/18" 
-    title: "Final project tips, model debugging and analysis"
-    lecture: "analysis"
-    leclinks:
-      - name: "L21-project-tips-analysis"
-        url: "assets/lecture-slides/L21-project-tips-analysis.pdf"
+    title: "GAN, Diffusion"
   - date: "11/20" 
-    title: "Information retrieval and RAG"
-    lecture: "rag"
-    leclinks:
-      - name: "L23-retrieval"
-        url: "assets/lecture-slides/L23-retrieval.pdf"
+    title: "Reinforcement learning"
   - date: "11/20" 
     tutorial: 10
 
@@ -206,11 +198,11 @@
   num: 12
   dates:
   - date: "11/25"
-    title: "Spare class"
+    title: "3D Vision, Vision + Language (foundation models)"
     project: "Project milestone"
     hwdue: "4"
   - date: "11/27" 
-    title: "Spare class"
+    title: "Physics AI, World model, Embedded AI"
 
 - week: 
   num: 13
